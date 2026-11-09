@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>06 · 场景 × Feature 收敛卡 | 一堂 AI FDE 工作坊</title>
+<link rel="stylesheet" href="handout.css">
+</head>
+<body data-page="b3-06">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">一</span><span>一堂 · AI FDE 工作坊</span><span class="brand-sub">NODE KMA</span></a>
+  <div class="top-actions">
+    <span class="save-state" id="saveState">已就绪</span>
+    <button class="btn ghost" data-act="print">打印</button>
+    <button class="btn ghost" data-act="clear">清空</button>
+    <button class="btn gold" data-act="export">导出 Markdown</button>
+  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">HANDOUT 06 / 12 · NODE KMA</div>
+<h1>场景 × Feature 收敛卡</h1>
+<p class="lead">场景是方向，Feature 是今天能交付的那一刀。把大场景收敛成一句话，再定 60 分验收标准。</p>
+<div class="meta"><span>1 句话</span><span>60 分验收</span><span>20 分钟</span></div>
+</section>
+<section class="card " data-section="场景锚点">
+<div class="card-head"><div class="sec-num">01</div><div><h2>场景锚点</h2><p class="sec-desc">先回答六个事实问题。答不上来的，说明场景还没收敛。</p></div></div>
+<div class="card-body"><div class="grid2"><div class="field"><div class="label"><span>用户是谁</span></div><input class="input" type="text" data-k="p06_who" data-label="用户是谁" placeholder="具体到角色，不写「所有人」。"></div><div class="field"><div class="label"><span>多久发生一次</span></div><input class="input" type="text" data-k="p06_freq" data-label="多久发生一次" placeholder="例如：每天 20 次，集中在上午。"></div><div class="field"><div class="label"><span>现在怎么做</span></div><input class="input" type="text" data-k="p06_now" data-label="现在怎么做" placeholder="现在的流程、工具、耗时。"></div><div class="field"><div class="label"><span>最痛的一步</span></div><input class="input" type="text" data-k="p06_pain" data-label="最痛的一步" placeholder="哪一步最容易出错或最浪费时间？"></div><div class="field"><div class="label"><span>现有替代方案</span></div><input class="input" type="text" data-k="p06_alt" data-label="现有替代方案" placeholder="人工、Excel、别的工具，为什么不够好？"></div><div class="field"><div class="label"><span>不做会怎样</span></div><input class="input" type="text" data-k="p06_cost" data-label="不做会怎样" placeholder="损失、返工、客户投诉，具体化。"></div></div></div>
+</section>
+<section class="card " data-section="收敛成一句话">
+<div class="card-head"><div class="sec-num">02</div><div><h2>收敛成一句话</h2><p class="sec-desc">按公式填。每个空都要能独立被外人看懂。</p></div></div>
+<div class="card-body"><div class="grid3"><div class="field"><div class="label"><span>场景</span></div><input class="input" type="text" data-k="p06_scene" data-label="场景" placeholder="例如：售后工单回复"></div><div class="field"><div class="label"><span>触发</span></div><input class="input" type="text" data-k="p06_trigger" data-label="触发" placeholder="例如：客户在群里发来投诉"></div><div class="field"><div class="label"><span>服务对象</span></div><input class="input" type="text" data-k="p06_serve" data-label="服务对象" placeholder="例如：一线客服"></div><div class="field"><div class="label"><span>输入</span></div><input class="input" type="text" data-k="p06_in" data-label="输入" placeholder="例如：聊天记录 + 订单信息"></div><div class="field"><div class="label"><span>输出</span></div><input class="input" type="text" data-k="p06_out" data-label="输出" placeholder="例如：三条可直接发送的回复草稿"></div><div class="field"><div class="label"><span>验收标准</span></div><input class="input" type="text" data-k="p06_std" data-label="验收标准" placeholder="例如：事实准确、语气不激化、30 秒内可改完"></div></div><div class="sentence-box">在「<span class="slot">场景</span>」里，当「<span class="slot">触发</span>」时，AI 帮「<span class="slot">谁</span>」把「<span class="slot">输入</span>」变成「<span class="slot">输出</span>」，做到「<span class="slot">标准</span>」。</div><div class="preview-box" id="featurePreview">填写上方六格后，这里会自动拼出一句话。</div><div class="field"><div class="label"><span>最终一句话 Feature（不超过 40 字）</span></div><textarea class="" data-k="p06_final" data-label="最终一句话 Feature（不超过 40 字）" placeholder="例如：把售后群投诉变成三条可发送的回复草稿。"></textarea></div></div>
+</section>
+<section class="card " data-section="60 分验收标准">
+<div class="card-head"><div class="sec-num">03</div><div><h2>60 分验收标准</h2><p class="sec-desc">60 分不是优秀，是能上线的底线。四项相加，≥48 分才算跑通。</p></div></div>
+<div class="card-body"><div class="table-wrap"><table class="score-table"><thead><tr><th>验收维度</th><th>满分</th><th>60 分标准描述</th><th>自评</th></tr></thead><tbody><tr><td>可复现</td><td>15</td><td>同样输入，三次至少两次拿到可用结果。</td><td><select data-k="p06_s1" data-label="可复现 得分" data-s06="1"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option><option value="15">15</option></select></td></tr><tr><td>可验收</td><td>15</td><td>输出有明确检查项，不靠「感觉不错」。</td><td><select data-k="p06_s2" data-label="可验收 得分" data-s06="1"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option><option value="15">15</option></select></td></tr><tr><td>省时</td><td>15</td><td>比人工至少省 50% 时间，且不增加返工。</td><td><select data-k="p06_s3" data-label="省时 得分" data-s06="1"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option><option value="15">15</option></select></td></tr><tr><td>不致命</td><td>15</td><td>错了能发现、能回滚、有人工兜底。</td><td><select data-k="p06_s4" data-label="不致命 得分" data-s06="1"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option><option value="15">15</option></select></td></tr></tbody></table></div><div class="result-box"><div><div class="big" id="total06">0 <small>/ 60</small></div></div><div class="verdict" id="msg06">正在计算……</div></div></div>
+</section>
+<section class="card " data-section="边界">
+<div class="card-head"><div class="sec-num">04</div><div><h2>边界</h2><p class="sec-desc">不写边界，AI 就会在真实场景里替你做危险的决定。</p></div></div>
+<div class="card-body"><div class="grid3"><div class="field"><div class="label"><span>不做什么</span></div><textarea class="tall" data-k="p06_not" data-label="不做什么" placeholder="例如：不直接发送、不承诺赔偿、不编造订单信息。"></textarea></div><div class="field"><div class="label"><span>人工兜底</span></div><textarea class="tall" data-k="p06_human" data-label="人工兜底" placeholder="例如：客服主管发送前必须过目。"></textarea></div><div class="field"><div class="label"><span>失败信号</span></div><textarea class="tall" data-k="p06_fail" data-label="失败信号" placeholder="例如：出现客户姓名错误、情绪升级、事实冲突。"></textarea></div></div></div>
+</section>
+<section class="card " data-section="收口">
+<div class="card-head"><div class="sec-num">05</div><div><h2>收口</h2><p class="sec-desc">一句话能说清，才可能被复现。</p></div></div>
+<div class="card-body"><div class="quote">先缩到一个场景，再缩到一个 Feature。能跑通的一句话，胜过一百页方案。<small>收敛原则</small></div></div>
+</section>
+</main>
+<footer class="footer">
+  <span>一堂 AI FDE 工作坊 · 节点 kma · 3 小时填写手册</span>
+  <span><a href="index.html">返回目录</a> · 内容自动保存在本机浏览器</span>
+</footer>
+<script>
+(function(){
+  const page = document.body.dataset.page;
+  const key = 'ytfde-' + page;
+  const stateEl = document.getElementById('saveState');
+  let timer;
+  function collect(){
+    const data = {};
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      if(el.type === 'checkbox'){
+        data[el.dataset.k] = el.checked;
+      } else if(el.type === 'radio'){
+        if(el.checked) data[el.dataset.k] = el.value;
+      } else {
+        data[el.dataset.k] = el.value;
+      }
+    });
+    return data;
+  }
+  function save(quiet){
+    try{
+      localStorage.setItem(key, JSON.stringify(collect()));
+      if(!quiet && stateEl){
+        stateEl.textContent = '已保存 ' + new Date().toLocaleTimeString('zh-CN',{hour12:false});
+        stateEl.classList.add('ok');
+      }
+    }catch(e){
+      if(stateEl) stateEl.textContent = '保存失败';
+    }
+  }
+  function restore(){
+    let data = {};
+    try{ data = JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ data = {}; }
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const v = data[el.dataset.k];
+      if(v === undefined) return;
+      if(el.type === 'checkbox') el.checked = !!v;
+      else if(el.type === 'radio') el.checked = (el.value === v);
+      else el.value = v;
+    });
+    if(stateEl && Object.keys(data).length) stateEl.textContent = '已恢复上次填写';
+    document.dispatchEvent(new CustomEvent('handout:restore'));
+  }
+  function md(){
+    const title = document.title.split('|')[0].trim();
+    const lines = ['# ' + title, '', '> 一堂 AI FDE 工作坊 · 节点 kma', '', '导出时间：' + new Date().toLocaleString('zh-CN'), ''];
+    let current = '';
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const sec = el.closest('[data-section]');
+      const secName = sec ? sec.dataset.section : '其他';
+      if(secName !== current){ current = secName; lines.push('', '## ' + secName); }
+      let val;
+      if(el.type === 'checkbox') val = el.checked ? '☑' : '☐';
+      else if(el.type === 'radio'){ if(!el.checked) return; val = el.value; }
+      else val = el.value || '';
+      if(el.type !== 'checkbox' && String(val).trim() === '') return;
+      const label = el.dataset.label || el.name || el.dataset.k;
+      lines.push('- **' + label + '**：' + String(val).replace(/\n/g, '\n  '));
+    });
+    return lines.join('\n');
+  }
+  function download(){
+    save(true);
+    const title = document.title.split('|')[0].trim().replace(/[\\/:*?"<>|]/g, '-').replace(/\s+/g, '-');
+    const blob = new Blob([md()], {type:'text/markdown;charset=utf-8'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = page + '-' + title + '.md';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 600);
+  }
+  document.addEventListener('input', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 500);
+  });
+  document.addEventListener('change', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 300);
+    if(window.handoutUpdate) window.handoutUpdate();
+  });
+  document.addEventListener('click', function(e){
+    const b = e.target.closest('[data-act]');
+    if(!b) return;
+    const act = b.dataset.act;
+    if(act === 'export') download();
+    if(act === 'print') window.print();
+    if(act === 'clear'){
+      if(confirm('确定清空本页所有填写内容？此操作不可撤销。')){
+        localStorage.removeItem(key);
+        location.reload();
+      }
+    }
+  });
+  restore();
+})();
+</script>
+<script>
+function update06(){
+  const get = function(k){
+    const el = document.querySelector('[data-k="' + k + '"]');
+    return el ? el.value.trim() : '';
+  };
+  const parts = [get('p06_scene'), get('p06_trigger'), get('p06_serve'), get('p06_in'), get('p06_out'), get('p06_std')];
+  const preview = document.getElementById('featurePreview');
+  if(preview){
+    if(parts.every(function(v){ return v === ''; })){
+      preview.textContent = '填写上方六格后，这里会自动拼出一句话。';
+    } else {
+      preview.textContent = '在「' + (parts[0] || '……') + '」里，当「' + (parts[1] || '……') + '」时，AI 帮「' + (parts[2] || '……') + '」把「' + (parts[3] || '……') + '」变成「' + (parts[4] || '……') + '」，做到「' + (parts[5] || '……') + '」。';
+    }
+  }
+  let sum = 0;
+  document.querySelectorAll('select[data-s06]').forEach(function(s){
+    sum += s.value ? Number(s.value) : 0;
+  });
+  const total = document.getElementById('total06');
+  if(total) total.innerHTML = sum + ' <small>/ 60</small>';
+  const msg = document.getElementById('msg06');
+  if(msg){
+    if(sum >= 48){ msg.textContent = '通过：达到可上线底线，进入真实场景重跑。'; msg.className = 'verdict pass'; }
+    else { msg.textContent = '未通过：还差 ' + (48 - sum) + ' 分，先补最弱的一项证据。'; msg.className = 'verdict fail'; }
+  }
+}
+window.handoutUpdate = update06;
+document.addEventListener('input', update06);
+update06();
+</script>
+</body>
+</html>

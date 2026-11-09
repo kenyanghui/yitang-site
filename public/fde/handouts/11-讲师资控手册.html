@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>11 · 讲师资控手册 | 一堂 AI FDE 工作坊</title>
+<link rel="stylesheet" href="handout.css">
+</head>
+<body data-page="b3-11">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">一</span><span>一堂 · AI FDE 工作坊</span><span class="brand-sub">NODE KMA</span></a>
+  <div class="top-actions">
+    <span class="save-state" id="saveState">已就绪</span>
+    <button class="btn ghost" data-act="print">打印</button>
+    <button class="btn ghost" data-act="clear">清空</button>
+    <button class="btn gold" data-act="export">导出 Markdown</button>
+  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">HANDOUT 11 / 12 · NODE KMA</div>
+<h1>讲师资控手册</h1>
+<p class="lead">讲师的功夫不在讲，在控场。每一段只做三件事：给时间、给动作、给兜底。分钟级执行，不靠临场发挥。</p>
+<div class="meta"><span>180 分钟</span><span>分钟级控场</span><span>讲师专用</span></div>
+</section>
+<section class="card " data-section="控场总表">
+<div class="card-head"><div class="sec-num">01</div><div><h2>控场总表</h2><p class="sec-desc">每一行都按分钟执行。讲师的时间感，就是学员的安全感。</p></div></div>
+<div class="card-body"><div class="table-wrap"><table><thead><tr><th>环节</th><th>时长</th><th>讲师动作</th><th>口令</th><th>翻车兜底</th></tr></thead><tbody><tr><td>开场</td><td>15 min</td><td>不问「大家了解 AI 吗」，直接发 02 卡</td><td>「先选，不解释，3 分钟」</td><td>冷场：点名两位先读自己的「否」</td></tr><tr><td>第一讲</td><td>30 min</td><td>讲双三角，每讲一个要素配一个案例</td><td>「结果不好，先别怪模型」</td><td>有人挑战：回到画布，请他指证据</td></tr><tr><td>休息</td><td>10 min</td><td>巡场看画布，找两个典型</td><td>「起身，找一个你不认识的人」</td><td>没人动：讲师先换座</td></tr><tr><td>第二讲</td><td>20 min</td><td>讲最小场景 × 最小 Feature，用蒋之之案例</td><td>「先缩到一个场景，再缩到一个 Feature」</td><td>场景太大：让他写「一周发生几次」</td></tr><tr><td>动手一</td><td>25 min</td><td>不发新知识，只巡场追问</td><td>「六要素，每格至少一句真话」</td><td>画布空白：从「昨天最烦的一件事」问起</td></tr><tr><td>休息</td><td>10 min</td><td>收一个翻车案例，准备点评</td><td>「把最丑的一版留着」</td><td>无人分享：讲师自曝一个失败</td></tr><tr><td>动手二</td><td>50 min</td><td>盯 07→08，反复强调单变量</td><td>「先跑通，再跑好」</td><td>跑不通：降到最小输入，先要一个输出</td></tr><tr><td>验收</td><td>20 min</td><td>10 自检 + 12 互评，严格计时</td><td>「60 分就交，不追求完美」</td><td>超时：砍展示，保留互评</td></tr></tbody></table></div></div>
+</section>
+<section class="card " data-section="三个高风险点">
+<div class="card-head"><div class="sec-num">02</div><div><h2>三个高风险点</h2><p class="sec-desc">高风险点不靠反应，靠预设。现场只做你已经排练过的动作。</p></div></div>
+<div class="card-body"><div class="step-list"><div class="step"><span class="n">1</span><div><strong>学员说「我的场景不适合 AI」</strong><small>识别：他在守旧流程，不是真的没有场景。口令：「先找一个你每周都在重复的动作。」兜底：把 05 卡的四条判据递给他。</small><textarea class="short" data-k="p11_risk1" data-label="高风险点 1 · 我的现场版本" placeholder="我的现场版本"></textarea></div></div><div class="step"><span class="n">2</span><div><strong>画布空白，学员不敢写</strong><small>识别：怕写错，不是不会。口令：「写丑的，不写对的。」兜底：讲师先给一个自己的烂例子。</small><textarea class="short" data-k="p11_risk2" data-label="高风险点 2 · 我的现场版本" placeholder="我的现场版本"></textarea></div></div><div class="step"><span class="n">3</span><div><strong>时间超时，有人纠细节</strong><small>识别：他在追求完美，不是故意拖。口令：「先记下来，课后补。」兜底：砍讲师点评，不砍学员填写。</small><textarea class="short" data-k="p11_risk3" data-label="高风险点 3 · 我的现场版本" placeholder="我的现场版本"></textarea></div></div></div></div>
+</section>
+<section class="card " data-section="讲师自检">
+<div class="card-head"><div class="sec-num">03</div><div><h2>讲师自检</h2><p class="sec-desc">开课前 10 分钟，逐项打勾。</p></div></div>
+<div class="card-body"><div class="check-grid"><label class="check"><input type="checkbox" data-k="p11_pre_timer" data-label="计时器可用，每段有提醒"><span>计时器可用，每段有提醒</span></label><label class="check"><input type="checkbox" data-k="p11_pre_screen" data-label="投屏正常，字号足够大"><span>投屏正常，字号足够大</span></label><label class="check"><input type="checkbox" data-k="p11_pre_print" data-label="02–12 打印数量足够"><span>02–12 打印数量足够</span></label><label class="check"><input type="checkbox" data-k="p11_pre_case" data-label="准备了两个备用案例"><span>准备了两个备用案例</span></label><label class="check"><input type="checkbox" data-k="p11_pre_ta" data-label="助教分工明确"><span>助教分工明确</span></label><label class="check"><input type="checkbox" data-k="p11_pre_export" data-label="导出 Markdown 演示过一遍"><span>导出 Markdown 演示过一遍</span></label><label class="check"><input type="checkbox" data-k="p11_pre_list" data-label="签到表和分组名单在手"><span>签到表和分组名单在手</span></label><label class="check"><input type="checkbox" data-k="p11_pre_self" data-label="自己的双三角画布有一版真话"><span>自己的双三角画布有一版真话</span></label></div></div>
+</section>
+<section class="card " data-section="现场记录">
+<div class="card-head"><div class="sec-num">04</div><div><h2>现场记录</h2><p class="sec-desc">每场只记三件事：超时、卡点、下一场要改的一个动作。</p></div></div>
+<div class="card-body"><div class="grid3"><div class="field"><div class="label"><span>讲师</span></div><input class="input" type="text" data-k="p11_name" data-label="讲师" placeholder="你的名字"></div><div class="field"><div class="label"><span>场次</span></div><input class="input" type="text" data-k="p11_session" data-label="场次" placeholder="例如：第 3 期"></div><div class="field"><div class="label"><span>日期</span></div><input class="input" type="text" data-k="p11_date" data-label="日期" placeholder="2026-__-__"></div></div><div class="field"><div class="label"><span>超时记录</span></div><textarea class="tall" data-k="p11_late" data-label="超时记录" placeholder="哪一段超了、超多久、为什么。"></textarea></div><div class="field"><div class="label"><span>待改进</span></div><textarea class="tall" data-k="p11_improve" data-label="待改进" placeholder="只写一个下一场要改的动作。"></textarea></div></div>
+</section>
+<section class="card " data-section="四条红线">
+<div class="card-head"><div class="sec-num">05</div><div><h2>四条红线</h2><p class="sec-desc">这四件事，宁可少讲，也不要越线。</p></div></div>
+<div class="card-body"><div class="callout warn"><strong>不替学员选场景</strong>：你替他选，他就不会为结果负责。<br><strong>不评价人，只评价证据</strong>：说「这里缺一条真实数据」，不说「你不行」。<br><strong>不承诺效果</strong>：只说方法和边界，不说「用了就一定会」。</div><div class="callout warn"><strong>不拖堂</strong>：拖堂不会让内容变多，只会让最后一段失效。</div></div>
+</section>
+</main>
+<footer class="footer">
+  <span>一堂 AI FDE 工作坊 · 节点 kma · 3 小时填写手册</span>
+  <span><a href="index.html">返回目录</a> · 内容自动保存在本机浏览器</span>
+</footer>
+<script>
+(function(){
+  const page = document.body.dataset.page;
+  const key = 'ytfde-' + page;
+  const stateEl = document.getElementById('saveState');
+  let timer;
+  function collect(){
+    const data = {};
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      if(el.type === 'checkbox'){
+        data[el.dataset.k] = el.checked;
+      } else if(el.type === 'radio'){
+        if(el.checked) data[el.dataset.k] = el.value;
+      } else {
+        data[el.dataset.k] = el.value;
+      }
+    });
+    return data;
+  }
+  function save(quiet){
+    try{
+      localStorage.setItem(key, JSON.stringify(collect()));
+      if(!quiet && stateEl){
+        stateEl.textContent = '已保存 ' + new Date().toLocaleTimeString('zh-CN',{hour12:false});
+        stateEl.classList.add('ok');
+      }
+    }catch(e){
+      if(stateEl) stateEl.textContent = '保存失败';
+    }
+  }
+  function restore(){
+    let data = {};
+    try{ data = JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ data = {}; }
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const v = data[el.dataset.k];
+      if(v === undefined) return;
+      if(el.type === 'checkbox') el.checked = !!v;
+      else if(el.type === 'radio') el.checked = (el.value === v);
+      else el.value = v;
+    });
+    if(stateEl && Object.keys(data).length) stateEl.textContent = '已恢复上次填写';
+    document.dispatchEvent(new CustomEvent('handout:restore'));
+  }
+  function md(){
+    const title = document.title.split('|')[0].trim();
+    const lines = ['# ' + title, '', '> 一堂 AI FDE 工作坊 · 节点 kma', '', '导出时间：' + new Date().toLocaleString('zh-CN'), ''];
+    let current = '';
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const sec = el.closest('[data-section]');
+      const secName = sec ? sec.dataset.section : '其他';
+      if(secName !== current){ current = secName; lines.push('', '## ' + secName); }
+      let val;
+      if(el.type === 'checkbox') val = el.checked ? '☑' : '☐';
+      else if(el.type === 'radio'){ if(!el.checked) return; val = el.value; }
+      else val = el.value || '';
+      if(el.type !== 'checkbox' && String(val).trim() === '') return;
+      const label = el.dataset.label || el.name || el.dataset.k;
+      lines.push('- **' + label + '**：' + String(val).replace(/\n/g, '\n  '));
+    });
+    return lines.join('\n');
+  }
+  function download(){
+    save(true);
+    const title = document.title.split('|')[0].trim().replace(/[\\/:*?"<>|]/g, '-').replace(/\s+/g, '-');
+    const blob = new Blob([md()], {type:'text/markdown;charset=utf-8'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = page + '-' + title + '.md';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 600);
+  }
+  document.addEventListener('input', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 500);
+  });
+  document.addEventListener('change', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 300);
+    if(window.handoutUpdate) window.handoutUpdate();
+  });
+  document.addEventListener('click', function(e){
+    const b = e.target.closest('[data-act]');
+    if(!b) return;
+    const act = b.dataset.act;
+    if(act === 'export') download();
+    if(act === 'print') window.print();
+    if(act === 'clear'){
+      if(confirm('确定清空本页所有填写内容？此操作不可撤销。')){
+        localStorage.removeItem(key);
+        location.reload();
+      }
+    }
+  });
+  restore();
+})();
+</script>
+
+</body>
+</html>

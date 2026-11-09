@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04 · 怪 AI 事件复盘卡 | 一堂 AI FDE 工作坊</title>
+<link rel="stylesheet" href="handout.css">
+</head>
+<body data-page="b3-04">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">一</span><span>一堂 · AI FDE 工作坊</span><span class="brand-sub">NODE KMA</span></a>
+  <div class="top-actions">
+    <span class="save-state" id="saveState">已就绪</span>
+    <button class="btn ghost" data-act="print">打印</button>
+    <button class="btn ghost" data-act="clear">清空</button>
+    <button class="btn gold" data-act="export">导出 Markdown</button>
+  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">HANDOUT 04 / 12 · NODE KMA</div>
+<h1>怪 AI 事件复盘卡</h1>
+<p class="lead">不急着换模型。先把那次「怪 AI」拆开，看看双三角缺了哪一块。写一个真实事件，越具体越好。</p>
+<div class="meta"><span>1 个真实事件</span><span>6 要素复盘</span><span>15 分钟</span></div>
+</section>
+<section class="card " data-section="事件原样">
+<div class="card-head"><div class="sec-num">01</div><div><h2>事件原样</h2><p class="sec-desc">只写事实，不写评价。时间、场景、你给了什么、你要什么。</p></div></div>
+<div class="card-body"><div class="grid2"><div class="field"><div class="label"><span>发生时间 / 场景</span></div><input class="input" type="text" data-k="p04_when" data-label="发生时间 / 场景" placeholder="例如：上周三，客户投诉群里"></div><div class="field"><div class="label"><span>我让 AI 做什么</span></div><input class="input" type="text" data-k="p04_task" data-label="我让 AI 做什么" placeholder="一句话任务"></div><div class="field"><div class="label"><span>我期待的结果</span></div><textarea class="" data-k="p04_want" data-label="我期待的结果" placeholder="具体到格式、语气、长度、给谁看。"></textarea></div><div class="field"><div class="label"><span>实际结果</span></div><textarea class="" data-k="p04_got" data-label="实际结果" placeholder="哪里不对？客户/同事怎么反应？"></textarea></div></div></div>
+</section>
+<section class="card " data-section="我当时怪了什么">
+<div class="card-head"><div class="sec-num">02</div><div><h2>我当时怪了什么</h2><p class="sec-desc">把原话写下来，不美化。怪模型、怪提示词、怪同事，都算。</p></div></div>
+<div class="card-body"><div class="check-grid"><label class="check"><input type="checkbox" data-k="p04_blame_model" data-label="模型太笨，换一个就好了"><span>模型太笨，换一个就好了</span></label><label class="check"><input type="checkbox" data-k="p04_blame_prompt" data-label="提示词不行，怎么写都不对"><span>提示词不行，怎么写都不对</span></label><label class="check"><input type="checkbox" data-k="p04_blame_data" data-label="数据太差，AI 根本不懂业务"><span>数据太差，AI 根本不懂业务</span></label><label class="check"><input type="checkbox" data-k="p04_blame_tool" data-label="工具难用，流程太绕"><span>工具难用，流程太绕</span></label><label class="check"><input type="checkbox" data-k="p04_blame_peer" data-label="同事没讲清楚需求"><span>同事没讲清楚需求</span></label><label class="check"><input type="checkbox" data-k="p04_blame_self" data-label="我自己也没想清楚要什么"><span>我自己也没想清楚要什么</span></label></div><div class="field"><div class="label"><span>我当时说的原话</span></div><textarea class="" data-k="p04_words" data-label="我当时说的原话" placeholder="例如：「这 AI 根本不懂我们行业。」"></textarea></div></div>
+</section>
+<section class="card " data-section="用双三角重看">
+<div class="card-head"><div class="sec-num">03</div><div><h2>用双三角重看</h2><p class="sec-desc">现在把「怪谁」换成「缺哪一角」。勾选所有成立的，再选最致命的一块。</p></div></div>
+<div class="card-body"><div class="check-grid"><label class="check"><input type="checkbox" data-k="p04_miss_scene" data-label="缺场景：任务边界没说清"><span>缺场景：任务边界没说清</span></label><label class="check"><input type="checkbox" data-k="p04_miss_eng" data-label="缺工程：提示词/流程/工具没搭好"><span>缺工程：提示词/流程/工具没搭好</span></label><label class="check"><input type="checkbox" data-k="p04_miss_fb" data-label="缺反馈数据：失败样例没回流"><span>缺反馈数据：失败样例没回流</span></label><label class="check"><input type="checkbox" data-k="p04_miss_taste" data-label="缺审美：我说不清什么是好结果"><span>缺审美：我说不清什么是好结果</span></label><label class="check"><input type="checkbox" data-k="p04_miss_system" data-label="缺体系：没有稳定流程，每次重来"><span>缺体系：没有稳定流程，每次重来</span></label><label class="check"><input type="checkbox" data-k="p04_miss_data" data-label="缺数据：没有真实案例和客户原话"><span>缺数据：没有真实案例和客户原话</span></label></div><div class="grid2" style="margin-top:16px"><div class="field"><div class="label"><span>最致命的一块</span></div><select data-k="p04_fatal" data-label="最致命的一块" ><option value="">请选择</option><option value="缺场景">缺场景</option><option value="缺工程">缺工程</option><option value="缺反馈数据">缺反馈数据</option><option value="缺审美">缺审美</option><option value="缺体系">缺体系</option><option value="缺数据">缺数据</option></select></div><div class="field"><div class="label"><span>证据从哪里看出来</span></div><input class="input" type="text" data-k="p04_evidence" data-label="证据从哪里看出来" placeholder="例如：客户原话里三次提到「你没听懂」。"></div></div></div>
+</section>
+<section class="card " data-section="如果重来一次">
+<div class="card-head"><div class="sec-num">04</div><div><h2>如果重来一次</h2><p class="sec-desc">只改一个变量。改三个，你只会得到「好像好了一点」的错觉。</p></div></div>
+<div class="card-body"><div class="field"><div class="label"><span>我会先改哪一处</span></div><textarea class="" data-k="p04_fix" data-label="我会先改哪一处" placeholder="一句话，具体到动作。例如：先补 10 条真实客户原话，再重写角色段。"></textarea></div><div class="field"><div class="label"><span>我预期会发生什么变化</span></div><textarea class="" data-k="p04_expect" data-label="我预期会发生什么变化" placeholder="可观察的输出差异。"></textarea></div><div class="field"><div class="label"><span>重跑后的实际结果（课后填）</span></div><textarea class="tall" data-k="p04_rerun" data-label="重跑后的实际结果（课后填）" placeholder="保留原始输出，不要只写结论。"></textarea></div><div class="field"><div class="label"><span>一句话结论</span></div><input class="input" type="text" data-k="p04_conclusion" data-label="一句话结论" placeholder="例如：不是模型不行，是我没给审美标准。"></div></div>
+</section>
+<section class="card " data-section="心态回扣">
+<div class="card-head"><div class="sec-num">05</div><div><h2>心态回扣</h2><p class="sec-desc">怪 AI 最省力，但也最没用。</p></div></div>
+<div class="card-body"><div class="quote">结果不好，怪不得 AI，也怪不得人，是双三角不够强。<small>每次想换模型前，先读一遍</small></div><div class="callout purple"><strong>张伟强 · 锑化镓研判：</strong>AI First 的第一次「真爽」不是运气，是他把 1000 份一页纸的审美喂进了画布。换模型解决不了审美缺失。</div></div>
+</section>
+</main>
+<footer class="footer">
+  <span>一堂 AI FDE 工作坊 · 节点 kma · 3 小时填写手册</span>
+  <span><a href="index.html">返回目录</a> · 内容自动保存在本机浏览器</span>
+</footer>
+<script>
+(function(){
+  const page = document.body.dataset.page;
+  const key = 'ytfde-' + page;
+  const stateEl = document.getElementById('saveState');
+  let timer;
+  function collect(){
+    const data = {};
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      if(el.type === 'checkbox'){
+        data[el.dataset.k] = el.checked;
+      } else if(el.type === 'radio'){
+        if(el.checked) data[el.dataset.k] = el.value;
+      } else {
+        data[el.dataset.k] = el.value;
+      }
+    });
+    return data;
+  }
+  function save(quiet){
+    try{
+      localStorage.setItem(key, JSON.stringify(collect()));
+      if(!quiet && stateEl){
+        stateEl.textContent = '已保存 ' + new Date().toLocaleTimeString('zh-CN',{hour12:false});
+        stateEl.classList.add('ok');
+      }
+    }catch(e){
+      if(stateEl) stateEl.textContent = '保存失败';
+    }
+  }
+  function restore(){
+    let data = {};
+    try{ data = JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ data = {}; }
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const v = data[el.dataset.k];
+      if(v === undefined) return;
+      if(el.type === 'checkbox') el.checked = !!v;
+      else if(el.type === 'radio') el.checked = (el.value === v);
+      else el.value = v;
+    });
+    if(stateEl && Object.keys(data).length) stateEl.textContent = '已恢复上次填写';
+    document.dispatchEvent(new CustomEvent('handout:restore'));
+  }
+  function md(){
+    const title = document.title.split('|')[0].trim();
+    const lines = ['# ' + title, '', '> 一堂 AI FDE 工作坊 · 节点 kma', '', '导出时间：' + new Date().toLocaleString('zh-CN'), ''];
+    let current = '';
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const sec = el.closest('[data-section]');
+      const secName = sec ? sec.dataset.section : '其他';
+      if(secName !== current){ current = secName; lines.push('', '## ' + secName); }
+      let val;
+      if(el.type === 'checkbox') val = el.checked ? '☑' : '☐';
+      else if(el.type === 'radio'){ if(!el.checked) return; val = el.value; }
+      else val = el.value || '';
+      if(el.type !== 'checkbox' && String(val).trim() === '') return;
+      const label = el.dataset.label || el.name || el.dataset.k;
+      lines.push('- **' + label + '**：' + String(val).replace(/\n/g, '\n  '));
+    });
+    return lines.join('\n');
+  }
+  function download(){
+    save(true);
+    const title = document.title.split('|')[0].trim().replace(/[\\/:*?"<>|]/g, '-').replace(/\s+/g, '-');
+    const blob = new Blob([md()], {type:'text/markdown;charset=utf-8'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = page + '-' + title + '.md';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 600);
+  }
+  document.addEventListener('input', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 500);
+  });
+  document.addEventListener('change', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 300);
+    if(window.handoutUpdate) window.handoutUpdate();
+  });
+  document.addEventListener('click', function(e){
+    const b = e.target.closest('[data-act]');
+    if(!b) return;
+    const act = b.dataset.act;
+    if(act === 'export') download();
+    if(act === 'print') window.print();
+    if(act === 'clear'){
+      if(confirm('确定清空本页所有填写内容？此操作不可撤销。')){
+        localStorage.removeItem(key);
+        location.reload();
+      }
+    }
+  });
+  restore();
+})();
+</script>
+
+</body>
+</html>

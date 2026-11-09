@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 · 交付物验收自检表 | 一堂 AI FDE 工作坊</title>
+<link rel="stylesheet" href="handout.css">
+</head>
+<body data-page="b3-10">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">一</span><span>一堂 · AI FDE 工作坊</span><span class="brand-sub">NODE KMA</span></a>
+  <div class="top-actions">
+    <span class="save-state" id="saveState">已就绪</span>
+    <button class="btn ghost" data-act="print">打印</button>
+    <button class="btn ghost" data-act="clear">清空</button>
+    <button class="btn gold" data-act="export">导出 Markdown</button>
+  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">HANDOUT 10 / 12 · NODE KMA</div>
+<h1>交付物验收自检表</h1>
+<p class="lead">交付不是感觉良好，是逐项能指出来。三件套，15 项，满分 60。60 分就交，不追求完美。</p>
+<div class="meta"><span>3 件套</span><span>15 项</span><span>满分 60</span></div>
+</section>
+<section class="card " data-section="评分规则">
+<div class="card-head"><div class="sec-num">00</div><div><h2>评分规则</h2><p class="sec-desc">自评时把证据放在旁边。没有证据的 4 分，按 2 分算。</p></div></div>
+<div class="card-body"><div class="callout"><strong>0 分</strong> 缺失　　<strong>2 分</strong> 及格，能看懂　　<strong>4 分</strong> 扎实，能被复现。满分 60，<strong>≥48 通过</strong>。</div></div>
+</section>
+<section class="card " data-section="画布 · 5 项">
+<div class="card-head"><div class="sec-num">01</div><div><h2>画布 · 5 项</h2><p class="sec-desc">每项 0 / 2 / 4 分。先写证据，再打分。</p></div></div>
+<div class="card-body"><div class="table-wrap"><table class="score-table"><thead><tr><th>检查项</th><th>自评</th><th>证据</th></tr></thead><tbody><tr><td>六要素都有真实内容，不是概念词</td><td><select data-k="p10_c1" data-label="六要素都有真实内容，不是概念词 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_c1_ev" data-label="六要素都有真实内容，不是概念词 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>最弱一角明确，且有补强动作</td><td><select data-k="p10_c2" data-label="最弱一角明确，且有补强动作 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_c2_ev" data-label="最弱一角明确，且有补强动作 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>三用法至少有一个具体例子</td><td><select data-k="p10_c3" data-label="三用法至少有一个具体例子 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_c3_ev" data-label="三用法至少有一个具体例子 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>结果可描述、可验收</td><td><select data-k="p10_c4" data-label="结果可描述、可验收 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_c4_ev" data-label="结果可描述、可验收 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>同伴能看懂并复述</td><td><select data-k="p10_c5" data-label="同伴能看懂并复述 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_c5_ev" data-label="同伴能看懂并复述 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr></tbody></table></div></div>
+</section>
+<section class="card " data-section="提示词 · 5 项">
+<div class="card-head"><div class="sec-num">02</div><div><h2>提示词 · 5 项</h2><p class="sec-desc">每项 0 / 2 / 4 分。先写证据，再打分。</p></div></div>
+<div class="card-body"><div class="table-wrap"><table class="score-table"><thead><tr><th>检查项</th><th>自评</th><th>证据</th></tr></thead><tbody><tr><td>五段骨架齐全：角色/知识/流程/样例/边界</td><td><select data-k="p10_p1" data-label="五段骨架齐全：角色/知识/流程/样例/边界 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_p1_ev" data-label="五段骨架齐全：角色/知识/流程/样例/边界 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>角色具体，有专业标准</td><td><select data-k="p10_p2" data-label="角色具体，有专业标准 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_p2_ev" data-label="角色具体，有专业标准 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>流程可执行，有判断点和输出格式</td><td><select data-k="p10_p3" data-label="流程可执行，有判断点和输出格式 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_p3_ev" data-label="流程可执行，有判断点和输出格式 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>数据样例真实，包含一个反例</td><td><select data-k="p10_p4" data-label="数据样例真实，包含一个反例 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_p4_ev" data-label="数据样例真实，包含一个反例 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>边界与人工兜底明确</td><td><select data-k="p10_p5" data-label="边界与人工兜底明确 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_p5_ev" data-label="边界与人工兜底明确 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr></tbody></table></div></div>
+</section>
+<section class="card " data-section="30 天卡 · 5 项">
+<div class="card-head"><div class="sec-num">03</div><div><h2>30 天卡 · 5 项</h2><p class="sec-desc">每项 0 / 2 / 4 分。先写证据，再打分。</p></div></div>
+<div class="card-body"><div class="table-wrap"><table class="score-table"><thead><tr><th>检查项</th><th>自评</th><th>证据</th></tr></thead><tbody><tr><td>四拍都有日期和完成标志</td><td><select data-k="p10_d1" data-label="四拍都有日期和完成标志 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_d1_ev" data-label="四拍都有日期和完成标志 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>每周动作具体，不写「多练习」</td><td><select data-k="p10_d2" data-label="每周动作具体，不写「多练习」 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_d2_ev" data-label="每周动作具体，不写「多练习」 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>完成标志可验证</td><td><select data-k="p10_d3" data-label="完成标志可验证 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_d3_ev" data-label="完成标志可验证 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>有固定时段、地点、触发器</td><td><select data-k="p10_d4" data-label="有固定时段、地点、触发器 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_d4_ev" data-label="有固定时段、地点、触发器 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr><tr><td>有复盘安排和见证人</td><td><select data-k="p10_d5" data-label="有复盘安排和见证人 自评" data-s10="1"><option value="">—</option><option value="0">0</option><option value="2">2</option><option value="4">4</option></select></td><td><textarea data-k="p10_d5_ev" data-label="有复盘安排和见证人 证据" placeholder="证据：在哪里、给谁看过、能否复现"></textarea></td></tr></tbody></table></div></div>
+</section>
+<section class="card " data-section="总分与结论">
+<div class="card-head"><div class="sec-num">04</div><div><h2>总分与结论</h2><p class="sec-desc">低于 48 分不丢人，硬交才丢人。先补证据最弱的一项。</p></div></div>
+<div class="card-body"><div class="result-box"><div><div class="big" id="total10">0 <small>/ 60</small></div></div><div class="verdict" id="msg10">正在计算……</div></div><div class="grid2" style="margin-top:14px"><div class="field"><div class="label"><span>未达标先补哪一项</span></div><textarea class="" data-k="p10_fix" data-label="未达标先补哪一项" placeholder="一项就够，下一轮只补它。"></textarea></div><div class="field"><div class="label"><span>验收人</span></div><input class="input" type="text" data-k="p10_checker" data-label="验收人" placeholder="组长或同伴"></div><div class="field"><div class="label"><span>验收日期</span></div><input class="input" type="text" data-k="p10_date" data-label="验收日期" placeholder="2026-__-__"></div><div class="field"><div class="label"><span>签名</span></div><input class="input" type="text" data-k="p10_sign" data-label="签名" placeholder="你的名字"></div></div></div>
+</section>
+<section class="card " data-section="提交清单">
+<div class="card-head"><div class="sec-num">05</div><div><h2>提交清单</h2><p class="sec-desc">交之前逐项打勾，避免最后五分钟找文件。</p></div></div>
+<div class="card-body"><div class="check-grid"><label class="check"><input type="checkbox" data-k="p10_sub_md" data-label="已导出 Markdown，文件能打开"><span>已导出 Markdown，文件能打开</span></label><label class="check"><input type="checkbox" data-k="p10_sub_print" data-label="已打印纸质版，字迹可读"><span>已打印纸质版，字迹可读</span></label><label class="check"><input type="checkbox" data-k="p10_sub_lead" data-label="已交给组长，完成互评"><span>已交给组长，完成互评</span></label><label class="check"><input type="checkbox" data-k="p10_sub_archive" data-label="已存档到自己的工作台"><span>已存档到自己的工作台</span></label></div></div>
+</section>
+</main>
+<footer class="footer">
+  <span>一堂 AI FDE 工作坊 · 节点 kma · 3 小时填写手册</span>
+  <span><a href="index.html">返回目录</a> · 内容自动保存在本机浏览器</span>
+</footer>
+<script>
+(function(){
+  const page = document.body.dataset.page;
+  const key = 'ytfde-' + page;
+  const stateEl = document.getElementById('saveState');
+  let timer;
+  function collect(){
+    const data = {};
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      if(el.type === 'checkbox'){
+        data[el.dataset.k] = el.checked;
+      } else if(el.type === 'radio'){
+        if(el.checked) data[el.dataset.k] = el.value;
+      } else {
+        data[el.dataset.k] = el.value;
+      }
+    });
+    return data;
+  }
+  function save(quiet){
+    try{
+      localStorage.setItem(key, JSON.stringify(collect()));
+      if(!quiet && stateEl){
+        stateEl.textContent = '已保存 ' + new Date().toLocaleTimeString('zh-CN',{hour12:false});
+        stateEl.classList.add('ok');
+      }
+    }catch(e){
+      if(stateEl) stateEl.textContent = '保存失败';
+    }
+  }
+  function restore(){
+    let data = {};
+    try{ data = JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ data = {}; }
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const v = data[el.dataset.k];
+      if(v === undefined) return;
+      if(el.type === 'checkbox') el.checked = !!v;
+      else if(el.type === 'radio') el.checked = (el.value === v);
+      else el.value = v;
+    });
+    if(stateEl && Object.keys(data).length) stateEl.textContent = '已恢复上次填写';
+    document.dispatchEvent(new CustomEvent('handout:restore'));
+  }
+  function md(){
+    const title = document.title.split('|')[0].trim();
+    const lines = ['# ' + title, '', '> 一堂 AI FDE 工作坊 · 节点 kma', '', '导出时间：' + new Date().toLocaleString('zh-CN'), ''];
+    let current = '';
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const sec = el.closest('[data-section]');
+      const secName = sec ? sec.dataset.section : '其他';
+      if(secName !== current){ current = secName; lines.push('', '## ' + secName); }
+      let val;
+      if(el.type === 'checkbox') val = el.checked ? '☑' : '☐';
+      else if(el.type === 'radio'){ if(!el.checked) return; val = el.value; }
+      else val = el.value || '';
+      if(el.type !== 'checkbox' && String(val).trim() === '') return;
+      const label = el.dataset.label || el.name || el.dataset.k;
+      lines.push('- **' + label + '**：' + String(val).replace(/\n/g, '\n  '));
+    });
+    return lines.join('\n');
+  }
+  function download(){
+    save(true);
+    const title = document.title.split('|')[0].trim().replace(/[\\/:*?"<>|]/g, '-').replace(/\s+/g, '-');
+    const blob = new Blob([md()], {type:'text/markdown;charset=utf-8'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = page + '-' + title + '.md';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 600);
+  }
+  document.addEventListener('input', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 500);
+  });
+  document.addEventListener('change', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 300);
+    if(window.handoutUpdate) window.handoutUpdate();
+  });
+  document.addEventListener('click', function(e){
+    const b = e.target.closest('[data-act]');
+    if(!b) return;
+    const act = b.dataset.act;
+    if(act === 'export') download();
+    if(act === 'print') window.print();
+    if(act === 'clear'){
+      if(confirm('确定清空本页所有填写内容？此操作不可撤销。')){
+        localStorage.removeItem(key);
+        location.reload();
+      }
+    }
+  });
+  restore();
+})();
+</script>
+<script>
+function update10(){
+  let sum = 0;
+  document.querySelectorAll('select[data-s10]').forEach(function(s){
+    sum += s.value ? Number(s.value) : 0;
+  });
+  const total = document.getElementById('total10');
+  if(total) total.innerHTML = sum + ' <small>/ 60</small>';
+  const msg = document.getElementById('msg10');
+  if(msg){
+    if(sum >= 48){ msg.textContent = '通过：三件套达到可交付底线，签字后进入互评。'; msg.className = 'verdict pass'; }
+    else { msg.textContent = '未通过：还差 ' + (48 - sum) + ' 分，先补证据最弱的一项。'; msg.className = 'verdict fail'; }
+  }
+}
+window.handoutUpdate = update10;
+update10();
+</script>
+</body>
+</html>

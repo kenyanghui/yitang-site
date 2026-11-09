@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12 · 组长任务卡 | 一堂 AI FDE 工作坊</title>
+<link rel="stylesheet" href="handout.css">
+</head>
+<body data-page="b3-12">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">一</span><span>一堂 · AI FDE 工作坊</span><span class="brand-sub">NODE KMA</span></a>
+  <div class="top-actions">
+    <span class="save-state" id="saveState">已就绪</span>
+    <button class="btn ghost" data-act="print">打印</button>
+    <button class="btn ghost" data-act="clear">清空</button>
+    <button class="btn gold" data-act="export">导出 Markdown</button>
+  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">HANDOUT 12 / 12 · NODE KMA</div>
+<h1>组长任务卡</h1>
+<p class="lead">组长只做三件事：计时、追问、按 60 分标准打分。不替组员改作业，也不当老好人。</p>
+<div class="meta"><span>4 人小组</span><span>60 分互评</span><span>20 分钟</span></div>
+</section>
+<section class="card " data-section="小组信息">
+<div class="card-head"><div class="sec-num">01</div><div><h2>小组信息</h2><p class="sec-desc">先把名字写清楚，互评时按名字记录。</p></div></div>
+<div class="card-body"><div class="kv"><div class="field"><div class="label"><span>组号</span></div><input class="input" type="text" data-k="p12_group" data-label="组号" placeholder="例如：3 组"></div><div class="field"><div class="label"><span>组长</span></div><input class="input" type="text" data-k="p12_lead" data-label="组长" placeholder="你的名字"></div><div class="field"><div class="label"><span>记录员</span></div><input class="input" type="text" data-k="p12_rec" data-label="记录员" placeholder="记录互评结论"></div><div class="field"><div class="label"><span>成员 1</span></div><input class="input" type="text" data-k="p12_m1name" data-label="成员 1" placeholder="名字"></div><div class="field"><div class="label"><span>成员 2</span></div><input class="input" type="text" data-k="p12_m2name" data-label="成员 2" placeholder="名字"></div><div class="field"><div class="label"><span>成员 3</span></div><input class="input" type="text" data-k="p12_m3name" data-label="成员 3" placeholder="名字"></div><div class="field"><div class="label"><span>成员 4</span></div><input class="input" type="text" data-k="p12_m4name" data-label="成员 4" placeholder="名字"></div></div></div>
+</section>
+<section class="card " data-section="展示节奏">
+<div class="card-head"><div class="sec-num">02</div><div><h2>展示节奏</h2><p class="sec-desc">每人 6 分钟：展示 3、提问 2、互评 1。铃响即停，组长负责按铃。</p></div></div>
+<div class="card-body"><div class="table-wrap"><table><thead><tr><th>成员</th><th>展示 3 分钟</th><th>提问 2 分钟</th><th>互评 1 分钟</th><th>实际起止</th></tr></thead><tbody><tr><td>成员 1</td><td><input class="input" data-k="p12_t1_show" data-label="成员 1 展示" placeholder="内容要点"></td><td><input class="input" data-k="p12_t1_ask" data-label="成员 1 提问" placeholder="一个问题"></td><td><input class="input" data-k="p12_t1_score" data-label="成员 1 互评" placeholder="一句话"></td><td><input class="input" data-k="p12_t1_time" data-label="成员 1 实际起止" placeholder="11:41–11:47"></td></tr><tr><td>成员 2</td><td><input class="input" data-k="p12_t2_show" data-label="成员 2 展示" placeholder="内容要点"></td><td><input class="input" data-k="p12_t2_ask" data-label="成员 2 提问" placeholder="一个问题"></td><td><input class="input" data-k="p12_t2_score" data-label="成员 2 互评" placeholder="一句话"></td><td><input class="input" data-k="p12_t2_time" data-label="成员 2 实际起止" placeholder="11:41–11:47"></td></tr><tr><td>成员 3</td><td><input class="input" data-k="p12_t3_show" data-label="成员 3 展示" placeholder="内容要点"></td><td><input class="input" data-k="p12_t3_ask" data-label="成员 3 提问" placeholder="一个问题"></td><td><input class="input" data-k="p12_t3_score" data-label="成员 3 互评" placeholder="一句话"></td><td><input class="input" data-k="p12_t3_time" data-label="成员 3 实际起止" placeholder="11:41–11:47"></td></tr><tr><td>成员 4</td><td><input class="input" data-k="p12_t4_show" data-label="成员 4 展示" placeholder="内容要点"></td><td><input class="input" data-k="p12_t4_ask" data-label="成员 4 提问" placeholder="一个问题"></td><td><input class="input" data-k="p12_t4_score" data-label="成员 4 互评" placeholder="一句话"></td><td><input class="input" data-k="p12_t4_time" data-label="成员 4 实际起止" placeholder="11:41–11:47"></td></tr></tbody></table></div></div>
+</section>
+<section class="card " data-section="60 分互评">
+<div class="card-head"><div class="sec-num">03</div><div><h2>60 分互评</h2><p class="sec-desc">五个维度，每维 12 分。只按证据打分，不按关系打分。</p></div></div>
+<div class="card-body"><div class="table-wrap"><table class="score-table"><thead><tr><th>成员</th><th>场景真<br><span style="font-weight:400;color:#a99fc4">满分 12</span></th><th>Feature 小<br><span style="font-weight:400;color:#a99fc4">满分 12</span></th><th>画布全<br><span style="font-weight:400;color:#a99fc4">满分 12</span></th><th>提示词可跑<br><span style="font-weight:400;color:#a99fc4">满分 12</span></th><th>30 天可执行<br><span style="font-weight:400;color:#a99fc4">满分 12</span></th><th>总分</th></tr></thead><tbody><tr><td><input class="input" id="m1name" data-k="p12_m1rname" data-label="互评成员 1 姓名" placeholder="成员 1"></td><td><select data-k="p12_m1_d1" data-label="成员 1 · 场景真" data-m="1"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m1_d2" data-label="成员 1 · Feature 小" data-m="1"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m1_d3" data-label="成员 1 · 画布全" data-m="1"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m1_d4" data-label="成员 1 · 提示词可跑" data-m="1"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m1_d5" data-label="成员 1 · 30 天可执行" data-m="1"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><span class="score-total" id="m1total">0</span> / 60</td></tr><tr><td><input class="input" id="m2name" data-k="p12_m2rname" data-label="互评成员 2 姓名" placeholder="成员 2"></td><td><select data-k="p12_m2_d1" data-label="成员 2 · 场景真" data-m="2"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m2_d2" data-label="成员 2 · Feature 小" data-m="2"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m2_d3" data-label="成员 2 · 画布全" data-m="2"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m2_d4" data-label="成员 2 · 提示词可跑" data-m="2"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m2_d5" data-label="成员 2 · 30 天可执行" data-m="2"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><span class="score-total" id="m2total">0</span> / 60</td></tr><tr><td><input class="input" id="m3name" data-k="p12_m3rname" data-label="互评成员 3 姓名" placeholder="成员 3"></td><td><select data-k="p12_m3_d1" data-label="成员 3 · 场景真" data-m="3"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m3_d2" data-label="成员 3 · Feature 小" data-m="3"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m3_d3" data-label="成员 3 · 画布全" data-m="3"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m3_d4" data-label="成员 3 · 提示词可跑" data-m="3"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m3_d5" data-label="成员 3 · 30 天可执行" data-m="3"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><span class="score-total" id="m3total">0</span> / 60</td></tr><tr><td><input class="input" id="m4name" data-k="p12_m4rname" data-label="互评成员 4 姓名" placeholder="成员 4"></td><td><select data-k="p12_m4_d1" data-label="成员 4 · 场景真" data-m="4"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m4_d2" data-label="成员 4 · Feature 小" data-m="4"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m4_d3" data-label="成员 4 · 画布全" data-m="4"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m4_d4" data-label="成员 4 · 提示词可跑" data-m="4"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><select data-k="p12_m4_d5" data-label="成员 4 · 30 天可执行" data-m="4"><option value="">—</option><option value="0">0</option><option value="3">3</option><option value="6">6</option><option value="9">9</option><option value="12">12</option></select></td><td><span class="score-total" id="m4total">0</span> / 60</td></tr></tbody></table></div><div class="result-box"><div class="big" id="top12">尚未打分</div><div class="verdict">推荐展示优先看「场景真」与「Feature 小」，不只看总分。</div></div></div>
+</section>
+<section class="card " data-section="追问清单">
+<div class="card-head"><div class="sec-num">04</div><div><h2>追问清单</h2><p class="sec-desc">组长只问问题，不给答案。每个问题都指向证据。</p></div></div>
+<div class="card-body"><div class="check-grid"><label class="check"><input type="checkbox" data-k="p12_q1" data-label="你的用户具体是谁？"><span>你的用户具体是谁？</span></label><label class="check"><input type="checkbox" data-k="p12_q2" data-label="这件事一周发生几次？"><span>这件事一周发生几次？</span></label><label class="check"><input type="checkbox" data-k="p12_q3" data-label="错了会怎样？谁兜底？"><span>错了会怎样？谁兜底？</span></label><label class="check"><input type="checkbox" data-k="p12_q4" data-label="提示词哪一段最不确定？"><span>提示词哪一段最不确定？</span></label><label class="check"><input type="checkbox" data-k="p12_q5" data-label="30 天后怎么知道有效？"><span>30 天后怎么知道有效？</span></label><label class="check"><input type="checkbox" data-k="p12_q6" data-label="哪一条是你今天编的，不是真实发生的？"><span>哪一条是你今天编的，不是真实发生的？</span></label></div><div class="field"><div class="label"><span>我实际追问了哪些</span></div><textarea class="tall" data-k="p12_asked" data-label="我实际追问了哪些" placeholder="记下对方的原话，不写你的评价。"></textarea></div></div>
+</section>
+<section class="card " data-section="组内结论">
+<div class="card-head"><div class="sec-num">05</div><div><h2>组内结论</h2><p class="sec-desc">选一个代表展示，指出一个共同短板。5 分钟内收口。</p></div></div>
+<div class="card-body"><div class="grid2"><div class="field"><div class="label"><span>推荐展示</span></div><input class="input" type="text" data-k="p12_pick" data-label="推荐展示" placeholder="成员名字"></div><div class="field"><div class="label"><span>推荐理由</span></div><textarea class="" data-k="p12_reason" data-label="推荐理由" placeholder="为什么是他？证据是什么？"></textarea></div><div class="field"><div class="label"><span>全组共同短板</span></div><textarea class="" data-k="p12_weak" data-label="全组共同短板" placeholder="只写一个，下一轮一起补。"></textarea></div><div class="field"><div class="label"><span>组长签字</span></div><input class="input" type="text" data-k="p12_sign" data-label="组长签字" placeholder="你的名字"></div><div class="field"><div class="label"><span>日期</span></div><input class="input" type="text" data-k="p12_date" data-label="日期" placeholder="2026-__-__"></div></div><div class="callout"><strong>组长纪律：</strong>不替组员改作业；不打断展示；不把「我觉得」当成证据。60 分就过，留时间给下一组。</div></div>
+</section>
+</main>
+<footer class="footer">
+  <span>一堂 AI FDE 工作坊 · 节点 kma · 3 小时填写手册</span>
+  <span><a href="index.html">返回目录</a> · 内容自动保存在本机浏览器</span>
+</footer>
+<script>
+(function(){
+  const page = document.body.dataset.page;
+  const key = 'ytfde-' + page;
+  const stateEl = document.getElementById('saveState');
+  let timer;
+  function collect(){
+    const data = {};
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      if(el.type === 'checkbox'){
+        data[el.dataset.k] = el.checked;
+      } else if(el.type === 'radio'){
+        if(el.checked) data[el.dataset.k] = el.value;
+      } else {
+        data[el.dataset.k] = el.value;
+      }
+    });
+    return data;
+  }
+  function save(quiet){
+    try{
+      localStorage.setItem(key, JSON.stringify(collect()));
+      if(!quiet && stateEl){
+        stateEl.textContent = '已保存 ' + new Date().toLocaleTimeString('zh-CN',{hour12:false});
+        stateEl.classList.add('ok');
+      }
+    }catch(e){
+      if(stateEl) stateEl.textContent = '保存失败';
+    }
+  }
+  function restore(){
+    let data = {};
+    try{ data = JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ data = {}; }
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const v = data[el.dataset.k];
+      if(v === undefined) return;
+      if(el.type === 'checkbox') el.checked = !!v;
+      else if(el.type === 'radio') el.checked = (el.value === v);
+      else el.value = v;
+    });
+    if(stateEl && Object.keys(data).length) stateEl.textContent = '已恢复上次填写';
+    document.dispatchEvent(new CustomEvent('handout:restore'));
+  }
+  function md(){
+    const title = document.title.split('|')[0].trim();
+    const lines = ['# ' + title, '', '> 一堂 AI FDE 工作坊 · 节点 kma', '', '导出时间：' + new Date().toLocaleString('zh-CN'), ''];
+    let current = '';
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const sec = el.closest('[data-section]');
+      const secName = sec ? sec.dataset.section : '其他';
+      if(secName !== current){ current = secName; lines.push('', '## ' + secName); }
+      let val;
+      if(el.type === 'checkbox') val = el.checked ? '☑' : '☐';
+      else if(el.type === 'radio'){ if(!el.checked) return; val = el.value; }
+      else val = el.value || '';
+      if(el.type !== 'checkbox' && String(val).trim() === '') return;
+      const label = el.dataset.label || el.name || el.dataset.k;
+      lines.push('- **' + label + '**：' + String(val).replace(/\n/g, '\n  '));
+    });
+    return lines.join('\n');
+  }
+  function download(){
+    save(true);
+    const title = document.title.split('|')[0].trim().replace(/[\\/:*?"<>|]/g, '-').replace(/\s+/g, '-');
+    const blob = new Blob([md()], {type:'text/markdown;charset=utf-8'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = page + '-' + title + '.md';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 600);
+  }
+  document.addEventListener('input', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 500);
+  });
+  document.addEventListener('change', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 300);
+    if(window.handoutUpdate) window.handoutUpdate();
+  });
+  document.addEventListener('click', function(e){
+    const b = e.target.closest('[data-act]');
+    if(!b) return;
+    const act = b.dataset.act;
+    if(act === 'export') download();
+    if(act === 'print') window.print();
+    if(act === 'clear'){
+      if(confirm('确定清空本页所有填写内容？此操作不可撤销。')){
+        localStorage.removeItem(key);
+        location.reload();
+      }
+    }
+  });
+  restore();
+})();
+</script>
+<script>
+function update12(){
+  const totals = [];
+  for(let m = 1; m <= 4; m++){
+    let sum = 0;
+    document.querySelectorAll('select[data-m="' + m + '"]').forEach(function(s){
+      sum += s.value ? Number(s.value) : 0;
+    });
+    const el = document.getElementById('m' + m + 'total');
+    if(el) el.textContent = sum;
+    totals.push(sum);
+  }
+  const top = Math.max.apply(null, totals);
+  const idx = totals.indexOf(top);
+  const topEl = document.getElementById('top12');
+  if(topEl){
+    if(top === 0){ topEl.textContent = '尚未打分'; }
+    else {
+      const nameEl = document.getElementById('m' + (idx + 1) + 'name');
+      const name = nameEl && nameEl.value ? nameEl.value : '成员 ' + (idx + 1);
+      topEl.textContent = '当前最高：' + name + '（' + top + ' / 60）';
+    }
+  }
+}
+window.handoutUpdate = update12;
+document.addEventListener('input', update12);
+update12();
+</script>
+</body>
+</html>

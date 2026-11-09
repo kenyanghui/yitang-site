@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一堂版 AI FDE 工作坊 · 讲师全流程手册（3h）</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#150b26;color:#e8dfc8;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;padding:40px 16px}
+.wrap{max-width:920px;margin:0 auto}
+h1{color:#f0c75e;font-size:30px;text-align:center;margin-bottom:6px;letter-spacing:2px}
+.sub{text-align:center;color:#b9a8d6;font-size:14px;margin-bottom:36px}
+h2{color:#f0c75e;font-size:22px;margin:44px 0 14px;padding:10px 16px;background:linear-gradient(90deg,#2a1745,#150b26);border-left:5px solid #f0c75e;border-radius:4px}
+h3{color:#d4b0f0;font-size:17px;margin:24px 0 10px}
+p,li{font-size:15px;margin-bottom:8px}
+ul,ol{margin:6px 0 14px 24px}
+.box{background:#1f1236;border:1px solid #3d2a63;border-radius:8px;padding:16px 20px;margin:14px 0}
+.gold{color:#f0c75e;font-weight:bold}
+.purple{color:#c9a6f2;font-weight:bold}
+.script{background:#241540;border-left:4px solid #c9a6f2;border-radius:6px;padding:14px 18px;margin:12px 0;font-size:15px}
+.script .say{color:#efe3ff}
+.warn{background:#2e1430;border-left:4px solid #e06a8a;border-radius:6px;padding:12px 18px;margin:12px 0}
+.warn b{color:#e89ab4}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th{background:#2a1745;color:#f0c75e;padding:9px 12px;text-align:left;border:1px solid #3d2a63}
+td{padding:9px 12px;border:1px solid #3d2a63;vertical-align:top}
+tr:nth-child(even) td{background:#1c1130}
+.tag{display:inline-block;background:#3a2158;color:#f0c75e;font-size:12px;border-radius:12px;padding:2px 12px;margin-right:8px}
+.timer{display:inline-block;background:#f0c75e;color:#150b26;font-weight:bold;border-radius:6px;padding:2px 12px;font-size:13px;margin-right:10px}
+.qa{margin:10px 0}
+.qa .q{color:#f0c75e;font-weight:bold}
+.step{margin:10px 0;padding-left:0}
+.step li{margin-bottom:10px}
+.footer{margin-top:50px;text-align:center;color:#8a7aa8;font-size:13px;border-top:1px solid #3d2a63;padding-top:20px}
+code{background:#2a1745;color:#f0c75e;padding:1px 8px;border-radius:4px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>一堂版 AI FDE 工作坊<br>讲师全流程手册（3 小时）</h1>
+<div class="sub">双三角 · 信心飞轮 · 最小场景×最小Feature · 出口三线 ｜ 深色紫金 · 内部教学用</div>
+
+<h2><span class="timer">00:00–00:15</span>开场 15 分钟：四连问 + 结论话术</h2>
+
+<h3>四连问逐字口令（节奏：每问停 3 秒，举手数人数，喊出数字）</h3>
+<div class="script">
+<p class="say">「第一问：过去一个月，用过 AI 帮你干活的，举手。」<span class="purple">（数）</span>「XX 位，OK。」</p>
+<p class="say">「第二问：用它写过整份文档、不只是改两句话的，手放着。」<span class="purple">（数）</span>「XX 位。」</p>
+<p class="say">「第三问：让 AI 干完活之后，你觉得『比我自己干还快』的，举手。」<span class="purple">（数）</span>「XX 位。」</p>
+<p class="say">「第四问：有那一次——AI 的产出让你愣了一下、心想『这玩意真行』的，举手。」<span class="purple">（数，通常最少）</span>「XX 位。」</p>
+</div>
+<div class="box"><p><span class="gold">主持节奏要点：</span>每问之间不许聊天；举完手立刻大声报数（「12 位、9 位、5 位、2 位」），让衰减可视化。第四问人数若不少于第三问，当场表扬该组并顺势加一句「今天结束时，这一列要变成全场最多」。</p></div>
+
+<h3>结论话术（逐字，慢速）</h3>
+<div class="script">
+<p class="say">「大家看这个数字的衰减：用过 AI 的很多，真正『爽过一次』的很少。所以今天的第一个结论是——」</p>
+<p class="say gold">「你的卡点不是不会工具，是没有击穿式的爽过一次。今天 3 小时，我们只干一件事：让你亲手击穿一次。就一次，就够了。」</p>
+</div>
+<div class="box"><p><span class="gold">教学原则（讲师自我约束）：</span>新人阶段过早封装必失败。3 小时内<b>不做</b>：工作台、多 Agent 编排、复杂工作流。<b>只做</b>：最小场景 × 最小 Feature。</p></div>
+
+<h2><span class="timer">00:15–00:45</span>第一讲 30 分钟：双三角 + 两个案例切片</h2>
+
+<h3>双三角讲稿要点</h3>
+<ul>
+<li><span class="gold">上三角（业务三角）：</span>业务目标 → 卡点环节 → 可用数据。讲师白板先画它，口令：「先想业务，再想 AI。AI 不是目标，是把卡点撬开的杠杆。」</li>
+<li><span class="gold">下三角（交付三角）：</span>最小场景 → 最小 Feature → 可验收产出。口令：「场景切到一次对话能跑完，Feature 切到一个能力，产出必须有个看得见的东西。」</li>
+<li><span class="gold">双三角关系：</span>上三角选『打哪里』，下三角保证『打得动』。两个三角对齐的那一刻，就是爽点发生的那一刻。</li>
+</ul>
+
+<h3>案例切片 A：温校长（≤3 分钟版）</h3>
+<div class="script">
+<p class="say">「温校长，学校管理者的典型痛点：每周要给老师写教研反馈，写一篇一小时，攒了一堆拖不动。」</p>
+<p class="say">「他没说『我要一个教学管理系统』，他说的是『我怪 AI 那次，是让它按我的评课口径改反馈，它改得比我自己还像我』。」</p>
+<p class="say">「注意：他的场景切得极小——就是『一篇反馈、一个口径』。上三角：卡点=写反馈慢；下三角：最小场景=单篇反馈，最小Feature=按口径改写，验收产出=一篇能直接发的反馈。」</p>
+</div>
+
+<h3>案例切片 B：张伟强（≤3 分钟版）</h3>
+<div class="script">
+<p class="say">「张伟强，业务骨干，手里全是表格和台账。最初他想让 AI『把整个部门的数据都管起来』——这是典型的场景太大，必失败。」</p>
+<p class="say">「切法：只留一个动作——每周从台账里抽出异常项，按固定格式生成周报初稿。一次对话跑完，产出能直接抄走。」</p>
+<p class="say">「他的原话是：『以前周报是我伺候表格，现在是表格伺候我。』这就是击穿式的一次。」</p>
+</div>
+
+<h3>学员动作指令</h3>
+<div class="script">
+<p class="say gold">「现在，每个人对你的同桌说一句：你怪 AI 的那一次——那次它让你失望、让你觉得『不过如此』的经历。30 秒，就一句。开始。」</p>
+</div>
+<div class="box"><p><span class="gold">讲师巡场：</span>听到『从没用过』的学员，引导改成『你想象中它最让你失望的是哪一步』；听到生动案例，记下名字，后面验收环节点名用。</p></div>
+
+<h3>常见提问应答</h3>
+<div class="qa"><p class="q">Q1：「AI 幻觉怎么办？」</p><p>A：先不解决。今天所有任务都是『有输入材料、有固定格式』的改写与抽取类任务，幻觉空间小。自由创作类留给第二阶段。</p></div>
+<div class="qa"><p class="q">Q2：「我用 ChatGPT 行不行？」</p><p>A：行。今天教的是切场景的方法，不是某个工具。工具随你，方法一样。</p></div>
+<div class="qa"><p class="q">Q3：「我这业务很复杂，AI 干不了吧？」</p><p>A：复杂业务里一定藏着一个『每周都重复、 format 固定』的小环节——先击穿那个，别的以后再说。</p></div>
+<div class="qa"><p class="q">Q4：「是不是马上要被 AI 取代了？」</p><p>A：今天的课程本身就在回答这个问题——被替代的不是岗位，是『每周重复、规则清晰』的那段动作。你现在学的是怎么当指挥那段动作的人，而不是被指挥的人。</p></div>
+<div class="qa"><p class="q">Q5：「公司不让把数据粘进 AI，怎么办？」</p><p>A：用脱敏样本跑通方法。今天练的是『切场景 + 转提示词 + 三轮迭代』这套动作，样本真不真实不影响动作成型。合规问题留给企业的底座线去解决。</p></div>
+<div class="qa"><p class="q">Q6：「为什么只讲一个 Feature，不讲工作台？」</p><p>A：新人阶段过早封装必失败。先把一次击穿的完整体感建立起来，工具和编排是后续课程的事。今天贪多，明天全忘。</p></div>
+
+<h2><span class="timer">00:45–01:05</span>第二讲 20 分钟：信心飞轮 + 蒋之之案例 + 选场景四判据</h2>
+
+<h3>信心飞轮讲稿要点</h3>
+<div class="script">
+<p class="say">「信心飞轮四步：小成功 → 敢多问 → 会调教 → 更大的成功。第一次击穿之后，你才敢把更多真活交给它；交得越多，你越知道怎么调教它；调教得越准，成功越大。」</p>
+<p class="say">「反过来说：从没小成功过的人，永远停在『试试看』，不会进入飞轮。所以第一次必须小、必须快、必须成。」</p>
+</div>
+
+<h3>蒋之之案例脚本（≤3 分钟）</h3>
+<div class="script">
+<p class="say">「蒋之之，运营岗，手里是每周的活动复盘。第一次她让 AI『帮我复盘活动』——产出四平八稳，全是套话，她当场判定『AI 不行』。」</p>
+<p class="say">「第二次按我们方法来：最小场景=只复盘转化漏斗那一段；最小Feature=按她给的五段式模板改写；她把自己上周的复盘粘进去当范例。产出 8 分像她本人。」</p>
+<p class="say">「关键差异不是模型，是<b>场景切小了、范例给了</b>。这一课等下你们跑的时候要用上。」</p>
+</div>
+<div class="box"><p><span class="gold">飞轮对照讲法：</span>指着飞轮图问学员——「蒋之之第一次失败，卡在哪一步？对，连『小成功』都没发生，飞轮根本没转。第二次她不是变聪明了，是终于让轮子转了第一圈。你们接下来 50 分钟，目标就是转第一圈。」</p></div>
+
+<h3>选场景四判据（板书，学员抄走）</h3>
+<table>
+<tr><th>判据</th><th>口令板书</th><th>不过关的样子</th></tr>
+<tr><td>高频</td><td>每周都发生</td><td>一年一次的事，练不熟</td></tr>
+<tr><td>规则清晰</td><td>你说得出好坏标准</td><td>凭感觉判断的活</td></tr>
+<tr><td>输入明确</td><td>材料/数据在手</td><td>要先到处收集的东西</td></tr>
+<tr><td>产出可见</td><td>有一份看得见的交付物</td><td>「帮我思考一下」类</td></tr>
+</table>
+<div class="box"><p><span class="gold">口令：</span>「四个判据全过——就是你的第一枪。挑一个，接下来 75 分钟打它。」</p></div>
+
+<h2><span class="timer">01:05–02:20</span>动手 75 分钟：画布 25 + 跑通 50</h2>
+
+<h3>阶段一：画布 25 分钟</h3>
+<p><span class="tag">发画布纸质版</span>学员在画布上填：业务目标 / 卡点环节 / 可用数据 / 最小场景 / 最小Feature / 验收标准。</p>
+<h3>巡场三问（讲师必问每位学员）</h3>
+<div class="script">
+<p class="say gold">三连问：①「你最懂什么业务？」②「这件事的流程怎么拆，拆到哪一步最费人？」③「这一步你手里有什么数据/材料？」</p>
+</div>
+<div class="warn"><p><b>巡场红线：</b>学员写『帮我做个客服系统』『帮我管整个流程』——立即按四判据退回，强制切到单个动作。宁可切太小最后加码，不要切太大当场翻车。</p></div>
+
+<h3>阶段二：跑通 50 分钟</h3>
+<h4>画布转提示词演示步骤（讲师投屏，5 分钟）</h4>
+<ol class="step">
+<li>把画布六格直接念成提示词骨架：「你是XX岗位的助手。我的业务目标是____。请针对____（最小场景），按____（最小Feature）处理我给你的材料。」</li>
+<li>粘入真实材料（学员自己的台账/文档片段）。</li>
+<li>补验收口径：「产出必须满足：格式为____，篇幅____，直接可用不用我大改。」</li>
+<li>发送，看第一版产出。</li>
+</ol>
+
+<h4>3 轮迭代节奏（每轮约 12 分钟）</h4>
+<ul>
+<li><span class="gold">第 1 轮 · 对齐格式：</span>只挑格式问题反馈，「输出改成五段式、每段不超过三行」。不动内容。</li>
+<li><span class="gold">第 2 轮 · 对齐口径：</span>给一条你的真实范例让它模仿，「按这段范例的语气重写」。</li>
+<li><span class="gold">第 3 轮 · 对齐验收：</span>按验收标准逐条挑错，只提可验证的具体问题。</li>
+</ul>
+<div class="box"><p><span class="gold">节奏口令：</span>「每轮只改一件事，改完立刻再跑。三轮打不住，说明场景还是大——回来切。」</p></div>
+
+<h4>60 分验收口径（每位学员自查 + 讲师抽查）</h4>
+<ul>
+<li>画布六格全部填写，最小场景通过四判据。</li>
+<li>提示词含：角色、业务目标、场景、Feature、材料、验收口径，六要素齐全。</li>
+<li>产出物：无需大改即可直接使用（发给同事不用改、能贴进周报不用改），即为 60 分。</li>
+</ul>
+
+<h4>互相展示组织法</h4>
+<div class="script">
+<p class="say">「最后 10 分钟，同桌互查：A 给 B 看『我的场景、我的提示词、我的产出』，B 只能问一个问题——『这个产出你敢直接用吗』。敢，就击穿了；不敢，指出哪里不敢。然后换人。90 秒一轮。」</p>
+</div>
+<div class="box"><p><span class="gold">巡场节奏（跑通 50 分钟版）：</span>前 5 分钟全班静默发第一轮，不许讨论；第 12 分钟统一喊「进入第二轮」，只许提格式反馈；第 24 分钟喊「进入第三轮」；第 36 分钟开始互查。讲师每 8 分钟绕场一圈，专找「盯着屏幕不动」的学员——那通常是场景太大或没材料，立即介入。</p>
+<p><span class="gold">救急动作：</span>发现 30 分钟还没有第一版产出的学员，直接把自己演示用的骨架提示词给其套用，先跑出东西再谈质量——「先有产出，再有迭代，最后才有验收」。</p></div>
+<div class="box"><p><span class="gold">全场收尾：</span>请 2 名『敢直接用』的学员投屏展示，各 90 秒；讲师只点评场景切得好的地方，不点评文笔。</p></div>
+
+<h2><span class="timer">02:20–02:40</span>验收与出口 20 分钟</h2>
+
+<h3>三件套验收口径</h3>
+<table>
+<tr><th>件</th><th>过关标准</th><th>不过关处理</th></tr>
+<tr><td>① 画布</td><td>六格完整 + 四判据通过</td><td>现场补切 5 分钟</td></tr>
+<tr><td>② 提示词</td><td>六要素齐全 + 三轮迭代记录</td><td>按演示骨架现场补齐</td></tr>
+<tr><td>③ 30 天卡</td><td>写下未来 30 天内、每周一次、要用 AI 干的那件具体事</td><td>口头说一遍，讲师代写</td></tr>
+</table>
+<div class="box"><p><span class="gold">口令：</span>「三件套齐，你今天就算击穿了。缺一件，都算没完成——所以先自查，再离场。」</p></div>
+
+<h3>出口三线分流话术</h3>
+<div class="script">
+<p class="say purple">拆 AI 线：「你今天的场景已经跑通、还想继续加场景的——走拆 AI 线，把你们业务里的卡点一个个拆出来击穿。」</p>
+<p class="say purple">底座线：「你想搞清楚底层能力、模型、数据到底怎么回事的——走底座线，从原理往下挖。」</p>
+<p class="say purple">FDE 企业线：「你是带着企业真实业务来的、想成体系落地的——走 FDE 企业线，我们按项目制带。」</p>
+</div>
+<div class="box"><p><span class="gold">分流组织要点：</span>扫码分流时讲师逐线报一句画像，学员自选、不劝改；三线人数悬殊属正常（拆 AI 线通常最多）。现场没想好的，默认先归拆 AI 线——继续攒击穿次数，永远不亏。</p></div>
+
+<h3>下期开课先验收上期（衔接说明）</h3>
+<div class="script">
+<p class="say">「下期开课的前 15 分钟，就是上期学员的验收场：带着你的 30 天卡和真实产出回来，讲三句话——做了什么、成了没、卡在哪。今天的三件套，就是你下期的入场券。」</p>
+</div>
+<div class="box"><p><span class="gold">衔接运营细节：</span>开课前 3 天由助教群发提醒：「带 30 天卡 + 一次真实使用记录」。验收未过的上期学员不拦入场，但结课时须补验收；连续两期未过者转出口三线重选——说明选线选错了，不是方法没用。</p></div>
+
+<h2>附录 A：时间轴总表</h2>
+<table>
+<tr><th>时段</th><th>模块</th><th>讲师动作</th><th>学员动作</th></tr>
+<tr><td>00:00–00:15</td><td>开场</td><td>四连问 + 结论话术</td><td>举手、报数、听结论</td></tr>
+<tr><td>00:15–00:45</td><td>第一讲</td><td>双三角 + 温校长/张伟强切片</td><td>对同桌说「怪 AI 的那一次」</td></tr>
+<tr><td>00:45–01:05</td><td>第二讲</td><td>信心飞轮 + 蒋之之 + 四判据板书</td><td>抄四判据、初选场景</td></tr>
+<tr><td>01:05–01:30</td><td>画布 25</td><td>巡场三问、红线退回</td><td>填画布六格</td></tr>
+<tr><td>01:30–02:20</td><td>跑通 50</td><td>投屏演示 + 3 轮节奏口令</td><td>转提示词、3 轮迭代、互查</td></tr>
+<tr><td>02:20–02:40</td><td>验收出口</td><td>三件套验收 + 三线分流</td><td>自查、填 30 天卡、选线</td></tr>
+</table>
+
+<h2>附录 B：翻车兜底</h2>
+<div class="warn"><p><b>学员场景太大怎么办：</b>当场停 30 秒，用四判据逐条打分；要求把场景改成「单份材料 + 单个动作 + 单份产出」，改完再放行。口令：「先打一只麻雀，别一枪打大象。」</p></div>
+<div class="warn"><p><b>模型输出始终不达标怎么办：</b>按顺序查三处——①场景是不是还在太大；②有没有给真实范例材料；③反馈是不是太笼统（『不好』不算反馈，『第三段改成两行』才算）。三处都对还不行的，换材料样本重跑一次；仍不行则降级目标：只要格式达标也算过，内容质量留到课后迭代。</p></div>
+<div class="warn"><p><b>现场没带电脑怎么办：</b>同桌结对共享一台；或由讲师投屏、该学员口述提示词由全班帮改。验收时以「画布 + 口述提示词 + 结对产出」为准，不因设备缺席卡验收。</p></div>
+
+<h2>附录 C：物料清单</h2>
+<ul>
+<li>画布纸质版：每人 1 张（六格：业务目标/卡点环节/可用数据/最小场景/最小Feature/验收标准）</li>
+<li>任务卡：每人 1 张（含四判据 + 提示词六要素 + 60 分口径）</li>
+<li>二维码：入场签到码 / 30 天卡电子提交码 / 出口三线报名码，各打印 1 份张贴</li>
+<li>讲师侧：白板笔（金/紫两色）、投屏备用线、计时器</li>
+</ul>
+
+<h2>附录 D：讲师彩排自查单（开课前逐项打勾）</h2>
+<table>
+<tr><th>检查项</th><th>口径</th></tr>
+<tr><td>四连问口令能否 90 秒内说完</td><td>计时彩排，超时删词不删问</td></tr>
+<tr><td>双三角板书是否提前练过</td><td>白板 2 分钟内画完两个三角并标注</td></tr>
+<tr><td>温校长/张伟强/蒋之之三案例</td><td>每个口述彩排 ≤3 分钟，超时砍细节不砍结构</td></tr>
+<tr><td>画布转提示词演示</td><td>投屏预跑一遍，确认 5 分钟内出第一版产出</td></tr>
+<tr><td>巡场三问是否背熟</td><td>懂什么/流程怎么拆/有什么数据，脱稿说出</td></tr>
+<tr><td>三件套验收口径</td><td>能逐件说出过关与不过关处理</td></tr>
+<tr><td>出口三线话术</td><td>三句分流话术脱稿，画像清晰</td></tr>
+<tr><td>兜底预案</td><td>场景太大/输出不达标/没带电脑三条背熟</td></tr>
+</table>
+
+<div class="footer">一堂版 AI FDE 工作坊 · 讲师手册 · 仅限内部教学使用</div>
+</div>
+</body>
+</html>

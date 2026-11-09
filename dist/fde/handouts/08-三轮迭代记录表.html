@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>08 · 三轮迭代记录表 | 一堂 AI FDE 工作坊</title>
+<link rel="stylesheet" href="handout.css">
+</head>
+<body data-page="b3-08">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">一</span><span>一堂 · AI FDE 工作坊</span><span class="brand-sub">NODE KMA</span></a>
+  <div class="top-actions">
+    <span class="save-state" id="saveState">已就绪</span>
+    <button class="btn ghost" data-act="print">打印</button>
+    <button class="btn ghost" data-act="clear">清空</button>
+    <button class="btn gold" data-act="export">导出 Markdown</button>
+  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">HANDOUT 08 / 12 · NODE KMA</div>
+<h1>三轮迭代记录表</h1>
+<p class="lead">每轮只改一个变量，否则你不知道是哪一刀起了作用。记录输入、输出、差距，以及你改的那一角。</p>
+<div class="meta"><span>3 轮</span><span>单变量</span><span>25 分钟</span></div>
+</section>
+<section class="card " data-section="基线">
+<div class="card-head"><div class="sec-num">01</div><div><h2>基线</h2><p class="sec-desc">先留下第一版，再谈优化。没有基线，就没有进步。</p></div></div>
+<div class="card-body"><div class="grid2"><div class="field"><div class="label"><span>场景 / Feature</span></div><input class="input" type="text" data-k="p08_scene" data-label="场景 / Feature" placeholder="一句话"></div><div class="field"><div class="label"><span>基线版本</span></div><input class="input" type="text" data-k="p08_base_ver" data-label="基线版本" placeholder="例如：v0.1"></div><div class="field"><div class="label"><span>初始输入</span></div><textarea class="tall" data-k="p08_base_in" data-label="初始输入" placeholder="原样粘贴，不要修饰。"></textarea></div><div class="field"><div class="label"><span>初始输出</span></div><textarea class="tall" data-k="p08_base_out" data-label="初始输出" placeholder="保留原始输出，不要只写「还行」。"></textarea></div></div><div class="field"><div class="label"><span>一句话差距</span></div><textarea class="" data-k="p08_base_gap" data-label="一句话差距" placeholder="例如：事实对，但语气像机器人。"></textarea></div></div>
+</section>
+<section class="card " data-section="三轮迭代">
+<div class="card-head"><div class="sec-num">02</div><div><h2>三轮迭代</h2><p class="sec-desc">一轮只改一处。改完立刻重跑，趁记忆还热。</p></div></div>
+<div class="card-body"><div class="table-wrap"><table><thead><tr><th>轮次</th><th>输入</th><th>输出</th><th>差距</th><th>改哪一要素</th><th>下一轮动作</th></tr></thead><tbody><tr><td>第 1 轮</td><td><textarea data-k="p08_r1_in" data-label="第 1 轮 输入" placeholder="这一轮我给了什么"></textarea></td><td><textarea data-k="p08_r1_out" data-label="第 1 轮 输出" placeholder="AI 实际给了什么"></textarea></td><td><textarea data-k="p08_r1_gap" data-label="第 1 轮 差距" placeholder="还差在哪"></textarea></td><td><select data-k="p08_r1_elem" data-label="第 1 轮 改哪一要素"><option value="">—</option><option value="场景">场景</option><option value="工程">工程</option><option value="反馈数据">反馈数据</option><option value="审美">审美</option><option value="体系">体系</option><option value="数据">数据</option></select></td><td><textarea data-k="p08_r1_next" data-label="第 1 轮 下一轮动作" placeholder="只写一个动作"></textarea></td></tr><tr><td>第 2 轮</td><td><textarea data-k="p08_r2_in" data-label="第 2 轮 输入" placeholder="这一轮我给了什么"></textarea></td><td><textarea data-k="p08_r2_out" data-label="第 2 轮 输出" placeholder="AI 实际给了什么"></textarea></td><td><textarea data-k="p08_r2_gap" data-label="第 2 轮 差距" placeholder="还差在哪"></textarea></td><td><select data-k="p08_r2_elem" data-label="第 2 轮 改哪一要素"><option value="">—</option><option value="场景">场景</option><option value="工程">工程</option><option value="反馈数据">反馈数据</option><option value="审美">审美</option><option value="体系">体系</option><option value="数据">数据</option></select></td><td><textarea data-k="p08_r2_next" data-label="第 2 轮 下一轮动作" placeholder="只写一个动作"></textarea></td></tr><tr><td>第 3 轮</td><td><textarea data-k="p08_r3_in" data-label="第 3 轮 输入" placeholder="这一轮我给了什么"></textarea></td><td><textarea data-k="p08_r3_out" data-label="第 3 轮 输出" placeholder="AI 实际给了什么"></textarea></td><td><textarea data-k="p08_r3_gap" data-label="第 3 轮 差距" placeholder="还差在哪"></textarea></td><td><select data-k="p08_r3_elem" data-label="第 3 轮 改哪一要素"><option value="">—</option><option value="场景">场景</option><option value="工程">工程</option><option value="反馈数据">反馈数据</option><option value="审美">审美</option><option value="体系">体系</option><option value="数据">数据</option></select></td><td><textarea data-k="p08_r3_next" data-label="第 3 轮 下一轮动作" placeholder="只写一个动作"></textarea></td></tr></tbody></table></div></div>
+</section>
+<section class="card " data-section="变量纪律">
+<div class="card-head"><div class="sec-num">03</div><div><h2>变量纪律</h2><p class="sec-desc">违反纪律的迭代，只是在碰运气。</p></div></div>
+<div class="card-body"><div class="check-grid"><label class="check"><input type="checkbox" data-k="p08_disc_one" data-label="每轮只改一个变量"><span>每轮只改一个变量</span></label><label class="check"><input type="checkbox" data-k="p08_disc_input" data-label="输入原样保留，不偷偷美化"><span>输入原样保留，不偷偷美化</span></label><label class="check"><input type="checkbox" data-k="p08_disc_fail" data-label="失败样例也记录，不只留成功"><span>失败样例也记录，不只留成功</span></label><label class="check"><input type="checkbox" data-k="p08_disc_peer" data-label="找一位同伴复现，确认不是偶然"><span>找一位同伴复现，确认不是偶然</span></label></div></div>
+</section>
+<section class="card " data-section="三轮之后">
+<div class="card-head"><div class="sec-num">04</div><div><h2>三轮之后</h2><p class="sec-desc">不追求完美，追求「知道下一刀往哪切」。</p></div></div>
+<div class="card-body"><div class="grid2"><div class="field"><div class="label"><span>最大提升来自</span></div><select data-k="p08_gain" data-label="最大提升来自" ><option value="">请选择</option><option value="场景">场景</option><option value="工程">工程</option><option value="反馈数据">反馈数据</option><option value="审美">审美</option><option value="体系">体系</option><option value="数据">数据</option></select></div><div class="field"><div class="label"><span>是否达到 60 分</span></div><select data-k="p08_pass" data-label="是否达到 60 分" ><option value="">请选择</option><option value="是">是</option><option value="接近">接近</option><option value="否">否</option></select></div><div class="field"><div class="label"><span>仍然不稳的地方</span></div><textarea class="tall" data-k="p08_unstable" data-label="仍然不稳的地方" placeholder="具体到哪类输入、哪种语气、哪个判断点。"></textarea></div><div class="field"><div class="label"><span>下一轮第一件事</span></div><textarea class="tall" data-k="p08_todo" data-label="下一轮第一件事" placeholder="一个动作，今天就能做。"></textarea></div></div><div class="callout warn"><strong>最常见的假迭代：</strong>同时改提示词、换模型、加知识库，然后说「这次好多了」。你无法归因，也无法复现。</div></div>
+</section>
+<section class="card " data-section="一句话复盘">
+<div class="card-head"><div class="sec-num">05</div><div><h2>一句话复盘</h2><p class="sec-desc">把三轮压成一句能带走的话。</p></div></div>
+<div class="card-body"><div class="field"><div class="label"><span>三轮之后，我学到的一句话</span></div><textarea class="" data-k="p08_lesson" data-label="三轮之后，我学到的一句话" placeholder="例如：不是模型不会写，是我没给它一个可验收的标准。"></textarea></div><div class="quote">每轮只改一个变量。改了三个，你只会得到「好像好了一点」。<small>迭代纪律</small></div></div>
+</section>
+</main>
+<footer class="footer">
+  <span>一堂 AI FDE 工作坊 · 节点 kma · 3 小时填写手册</span>
+  <span><a href="index.html">返回目录</a> · 内容自动保存在本机浏览器</span>
+</footer>
+<script>
+(function(){
+  const page = document.body.dataset.page;
+  const key = 'ytfde-' + page;
+  const stateEl = document.getElementById('saveState');
+  let timer;
+  function collect(){
+    const data = {};
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      if(el.type === 'checkbox'){
+        data[el.dataset.k] = el.checked;
+      } else if(el.type === 'radio'){
+        if(el.checked) data[el.dataset.k] = el.value;
+      } else {
+        data[el.dataset.k] = el.value;
+      }
+    });
+    return data;
+  }
+  function save(quiet){
+    try{
+      localStorage.setItem(key, JSON.stringify(collect()));
+      if(!quiet && stateEl){
+        stateEl.textContent = '已保存 ' + new Date().toLocaleTimeString('zh-CN',{hour12:false});
+        stateEl.classList.add('ok');
+      }
+    }catch(e){
+      if(stateEl) stateEl.textContent = '保存失败';
+    }
+  }
+  function restore(){
+    let data = {};
+    try{ data = JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ data = {}; }
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const v = data[el.dataset.k];
+      if(v === undefined) return;
+      if(el.type === 'checkbox') el.checked = !!v;
+      else if(el.type === 'radio') el.checked = (el.value === v);
+      else el.value = v;
+    });
+    if(stateEl && Object.keys(data).length) stateEl.textContent = '已恢复上次填写';
+    document.dispatchEvent(new CustomEvent('handout:restore'));
+  }
+  function md(){
+    const title = document.title.split('|')[0].trim();
+    const lines = ['# ' + title, '', '> 一堂 AI FDE 工作坊 · 节点 kma', '', '导出时间：' + new Date().toLocaleString('zh-CN'), ''];
+    let current = '';
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const sec = el.closest('[data-section]');
+      const secName = sec ? sec.dataset.section : '其他';
+      if(secName !== current){ current = secName; lines.push('', '## ' + secName); }
+      let val;
+      if(el.type === 'checkbox') val = el.checked ? '☑' : '☐';
+      else if(el.type === 'radio'){ if(!el.checked) return; val = el.value; }
+      else val = el.value || '';
+      if(el.type !== 'checkbox' && String(val).trim() === '') return;
+      const label = el.dataset.label || el.name || el.dataset.k;
+      lines.push('- **' + label + '**：' + String(val).replace(/\n/g, '\n  '));
+    });
+    return lines.join('\n');
+  }
+  function download(){
+    save(true);
+    const title = document.title.split('|')[0].trim().replace(/[\\/:*?"<>|]/g, '-').replace(/\s+/g, '-');
+    const blob = new Blob([md()], {type:'text/markdown;charset=utf-8'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = page + '-' + title + '.md';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 600);
+  }
+  document.addEventListener('input', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 500);
+  });
+  document.addEventListener('change', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 300);
+    if(window.handoutUpdate) window.handoutUpdate();
+  });
+  document.addEventListener('click', function(e){
+    const b = e.target.closest('[data-act]');
+    if(!b) return;
+    const act = b.dataset.act;
+    if(act === 'export') download();
+    if(act === 'print') window.print();
+    if(act === 'clear'){
+      if(confirm('确定清空本页所有填写内容？此操作不可撤销。')){
+        localStorage.removeItem(key);
+        location.reload();
+      }
+    }
+  });
+  restore();
+})();
+</script>
+
+</body>
+</html>

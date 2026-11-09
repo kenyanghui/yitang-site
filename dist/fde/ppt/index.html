@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一堂版 AI FDE 工作坊</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0d16;--purple:#a78bfa;--cyan:#22d3ee;--gold:#fbbf24;--fg:#e5e7eb;--dim:#9ca3af}
+html,body{height:100%;background:var(--bg);color:var(--fg);font-family:"PingFang SC","Microsoft YaHei",sans-serif;overflow:hidden}
+.deck{height:100vh;position:relative}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;align-items:center;padding:6vh 8vw;text-align:center}
+.slide.active{display:flex}
+h1{font-size:3.2em;color:var(--gold);margin-bottom:.4em}
+h2{font-size:2.2em;color:var(--purple);margin-bottom:.6em}
+p,li{font-size:1.25em;line-height:1.7}
+ul{list-style:none;text-align:left}
+li{margin:.45em 0;padding-left:1.4em;position:relative}
+li::before{content:"◆";color:var(--cyan);position:absolute;left:0}
+.tag{display:inline-block;border:1px solid var(--purple);color:var(--purple);border-radius:999px;padding:.2em 1em;margin:.3em;font-size:1em}
+.gold{color:var(--gold)}.cyan{color:var(--cyan)}.purple{color:var(--purple)}
+.quote{font-size:2em;color:var(--gold);border-left:6px solid var(--purple);padding:.4em 1em;text-align:left;max-width:70vw}
+.cols{display:flex;gap:4vw;justify-content:center;align-items:flex-start}
+.cols>div{flex:1;max-width:40vw}
+.tri{display:flex;justify-content:center;align-items:center;gap:2vw;margin:1.5em 0}
+.node{width:10em;height:10em;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1em;font-weight:bold}
+.na{border:2px solid var(--purple);color:var(--purple);background:rgba(167,139,250,.08)}
+.ai{border:2px solid var(--cyan);color:var(--cyan);background:rgba(34,211,238,.08)}
+.x{color:var(--gold);font-size:2.5em;font-weight:bold}
+.flow{display:flex;gap:1.2vw;justify-content:center;margin:1.5em 0}
+.step{border:1px solid var(--gold);color:var(--gold);border-radius:.6em;padding:1em 1.2em;min-width:11em}
+.step b{display:block;font-size:1.2em;margin-bottom:.3em}
+.footer{position:fixed;bottom:2vh;right:3vw;color:var(--dim);font-size:.85em}
+.page{position:fixed;bottom:2vh;left:3vw;color:var(--dim);font-size:.85em}
+table{border-collapse:collapse;margin:1em auto}
+td{border:1px solid #374151;padding:.5em 1.2em;font-size:1.05em}
+td:first-child{color:var(--gold)}
+.case{border:1px solid #374151;border-radius:1em;padding:1.5em 2em;max-width:60vw;background:rgba(167,139,250,.05)}
+.hint{position:fixed;bottom:2vh;left:50%;transform:translateX(-50%);color:#4b5563;font-size:.8em}
+@media print{body{overflow:visible}.slide{display:flex;position:relative;page-break-after:always;height:100vh}.footer,.page,.hint{display:none}}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<section class="slide">
+<h1>一堂版 AI FDE 工作坊</h1>
+<p class="purple" style="font-size:1.5em">把 AI 用到业务里的第一堂实操课</p>
+<div style="margin-top:2em">
+<span class="tag">2026 年 __ 月 __ 日</span>
+<span class="tag">地点：________</span>
+<span class="tag">时长：3 小时</span>
+</div>
+</section>
+
+<section class="slide">
+<h2>开场四连问</h2>
+<ul style="max-width:60vw">
+<li>你每天有多少时间花在「重复但离不开判断」的事上？</li>
+<li>团队里谁最懂业务，谁最懂 AI，中间隔着什么？</li>
+<li>如果 AI 明天就能帮你干掉一项工作，你选哪一项？</li>
+<li>你敢让 AI 的产出直接给客户看吗？为什么？</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>什么是双三角？</h2>
+<div class="tri">
+<div class="node na">人<br><small style="font-weight:normal">审美 · 体系 · 数据</small></div>
+<div class="x">×</div>
+<div class="node ai">AI<br><small style="font-weight:normal">场景 · 工程 · 反馈</small></div>
+</div>
+<p>懂业务的人 × 会落地的 AI = <span class="gold">FDE 式工作方式</span></p>
+<p style="color:var(--dim)">AI Forward Deployed Engineer：把 AI 部署进真实业务</p>
+</section>
+
+<section class="slide">
+<h2>人的三要素</h2>
+<div class="cols">
+<div><p class="purple" style="font-size:1.6em">审美</p><p>判断什么是「好」——AI 产出最终由你的品味兜底</p></div>
+<div><p class="purple" style="font-size:1.6em">体系</p><p>把业务拆成流程和规则——AI 只能增强有体系的人</p></div>
+<div><p class="purple" style="font-size:1.6em">数据</p><p>沉淀业务数据——数据是 AI 理解你业务的唯一语言</p></div>
+</div>
+</section>
+
+<section class="slide">
+<h2>AI 的三要素</h2>
+<div class="cols">
+<div><p class="cyan" style="font-size:1.6em">场景</p><p>选对入口——从最小、可验证的业务场景切入</p></div>
+<div><p class="cyan" style="font-size:1.6em">工程</p><p>搭好管线——Prompt、工具链、交付流程都要工程化</p></div>
+<div><p class="cyan" style="font-size:1.6em">反馈</p><p>闭环迭代——AI 的每次产出都是下一版的训练信号</p></div>
+</div>
+</section>
+
+<section class="slide">
+<h2>三个用法</h2>
+<ul style="max-width:62vw">
+<li><b class="gold">当助手</b>：让它干活，你验收——效率提升，风险可控</li>
+<li><b class="gold">当顾问</b>：让它出方案，你拍板——视角扩展，判断留人</li>
+<li><b class="gold">当员工</b>：给它岗位和流程，它自己跑——真正的杠杆</li>
+</ul>
+<p style="margin-top:1em;color:var(--dim)">从助手到员工，是同一套能力的三个成熟度</p>
+</section>
+
+<section class="slide">
+<h2>心态句</h2>
+<div class="quote">AI 不会取代你，<br>但会用 AI 的人会。</div>
+<p style="margin-top:1.5em;color:var(--dim)">今天的目标：让你成为「会用 AI 的人」</p>
+</section>
+
+<section class="slide">
+<h2>案例一 · 温校长 AI 客服</h2>
+<div class="case">
+<p><span class="gold">场景</span>：培训机构招生咨询，重复问答占据老师大量时间</p>
+<p><span class="cyan">做法</span>：把历史问答沉淀成知识库，AI 先答、人兜底</p>
+<p><span class="purple">结果</span>：响应从小时级到秒级，老师回归教学本体</p>
+</div>
+</section>
+
+<section class="slide">
+<h2>案例二 · 张伟强锑化镓</h2>
+<div class="case">
+<p><span class="gold">场景</span>：半导体材料行业，专业文献与技术文档晦涩难懂</p>
+<p><span class="cyan">做法</span>：AI 做文献研读与技术翻译，专家只做终审</p>
+<p><span class="purple">结果</span>：跨行业沟通成本大幅下降，商机识别提速</p>
+</div>
+</section>
+
+<section class="slide">
+<h2>案例三 · 蒋之之取消订单</h2>
+<div class="case">
+<p><span class="gold">场景</span>：电商客服高峰期，取消订单流程堵在人工排队</p>
+<p><span class="cyan">做法</span>：AI 按规则自动处理标准取消，异常升级人工</p>
+<p><span class="purple">结果</span>：标准件全自动，人工只处理真正需要判断的</p>
+</div>
+</section>
+
+<section class="slide">
+<h2>信心飞轮四阶段</h2>
+<div class="flow">
+<div class="step"><b>1 尝试</b>跑通一个<br>最小场景</div>
+<div class="step"><b>2 验证</b>产出被真实<br>业务接受</div>
+<div class="step"><b>3 推广</b>复制到<br>更多场景</div>
+<div class="step"><b>4 沉淀</b>数据与流程<br>反哺下一轮</div>
+</div>
+<p>每转一圈，你和 AI 都更强</p>
+</section>
+
+<section class="slide">
+<h2>最小场景 × 最小 Feature</h2>
+<p style="margin-bottom:.8em">选第一个切入点，先小再大</p>
+<div class="cols">
+<div style="max-width:26vw">
+<p class="cyan" style="font-size:1.3em;margin-bottom:.4em">四判据</p>
+<ul>
+<li>一周内能跑通</li>
+<li>产出可直接用</li>
+<li>失败成本够低</li>
+<li>有人愿意验收</li>
+</ul>
+</div>
+<div style="max-width:30vw">
+<p class="purple" style="font-size:1.3em;margin-bottom:.4em">心法</p>
+<p>不要一上来就「数字化改造」，<br>先让 AI 替你完成一件<br>你今天就要交的事</p>
+</div>
+</div>
+</section>
+
+<section class="slide">
+<h2>3 小时日程</h2>
+<table>
+<tr><td>0:00–0:20</td><td>开场四连问 + 双三角框架</td></tr>
+<tr><td>0:20–1:00</td><td>三要素拆解 + 三个案例</td></tr>
+<tr><td>1:00–2:20</td><td>实操：每人跑通一个最小场景</td></tr>
+<tr><td>2:20–2:50</td><td>信心飞轮 + 现场验收产出</td></tr>
+<tr><td>2:50–3:00</td><td>三件套 + 出口三线</td></tr>
+</table>
+</section>
+
+<section class="slide">
+<h2>你将带走三件套</h2>
+<ul style="max-width:55vw">
+<li>一份属于你的<b class="cyan">最小场景清单</b>（四判据筛过）</li>
+<li>一套<b class="cyan">可复用的 Prompt 与流程模板</b></li>
+<li>一张<b class="cyan">信心飞轮路线图</b>（你的第一个月）</li>
+</ul>
+<p style="margin-top:1em" class="gold">出口三线：上线一条流程 / 立项一个场景 / 结识一群同路人</p>
+</section>
+
+<section class="slide">
+<h1 style="font-size:2.6em">下一步，从今天的第一个场景开始</h1>
+<p style="font-size:1.6em;margin-top:1em"><span class="purple">yitang.aibay.asia</span></p>
+<p style="color:var(--dim);margin-top:1em">讲义、模板与社群入口，扫码现场领取</p>
+</section>
+
+</div>
+<div class="page" id="pg"></div>
+<div class="footer">一堂版 AI FDE 工作坊</div>
+<div class="hint">← → 翻页</div>
+<script>
+var s=document.querySelectorAll('.slide'),i=0;
+function show(n){s[i].classList.remove('active');i=(n+s.length)%s.length;s[i].classList.add('active');document.getElementById('pg').textContent=(i+1)+' / '+s.length}
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')show(i+1);if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1)});
+document.addEventListener('click',function(e){show(e.clientX>innerWidth/2?i+1:i-1)});
+show(0);
+</script>
+</body>
+</html>

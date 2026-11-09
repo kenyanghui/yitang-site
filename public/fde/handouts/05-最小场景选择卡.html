@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>05 · 最小场景选择卡 | 一堂 AI FDE 工作坊</title>
+<link rel="stylesheet" href="handout.css">
+</head>
+<body data-page="b3-05">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">一</span><span>一堂 · AI FDE 工作坊</span><span class="brand-sub">NODE KMA</span></a>
+  <div class="top-actions">
+    <span class="save-state" id="saveState">已就绪</span>
+    <button class="btn ghost" data-act="print">打印</button>
+    <button class="btn ghost" data-act="clear">清空</button>
+    <button class="btn gold" data-act="export">导出 Markdown</button>
+  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">HANDOUT 05 / 12 · NODE KMA</div>
+<h1>最小场景选择卡</h1>
+<p class="lead">先别选最性感的场景，选最容易被跑通的场景。四条判据，每个候选 1–5 分，先排雷再排名。</p>
+<div class="meta"><span>3 个候选</span><span>4 条判据</span><span>25 分钟</span></div>
+</section>
+<section class="card " data-section="四条判据">
+<div class="card-head"><div class="sec-num">01</div><div><h2>四条判据</h2><p class="sec-desc">四条不是加分项，是筛选器。任何一条只有 1 分，先别做。</p></div></div>
+<div class="card-body"><div class="grid3"><div class="callout" style="margin:0"><strong>规则明确</strong><br>输入输出能说清，不靠猜。新人听一遍也知道该交什么。</div><div class="callout purple" style="margin:0"><strong>重复性高</strong><br>一周发生多次，不是一次性项目。重复才值得固化。</div><div class="callout" style="margin:0"><strong>耗时多</strong><br>每次至少 15 分钟，省下来看得见。</div></div><div class="callout warn" style="margin-top:14px"><strong>错了不致命：</strong>可回滚、可人工兜底、不会直接造成重大损失。四条里任何一条 1 分，先换场景。</div><div class="tag-row"><span class="tag gold">规则明确</span><span class="tag gold">重复性高</span><span class="tag gold">耗时多</span><span class="tag gold">错了不致命</span></div></div>
+</section>
+<section class="card " data-section="候选场景打分">
+<div class="card-head"><div class="sec-num">02</div><div><h2>候选场景打分</h2><p class="sec-desc">三个候选必须来自你的真实工作，不要写「做一个万能助手」。</p></div></div>
+<div class="card-body"><div class="table-wrap"><table class="score-table"><thead><tr><th>候选场景</th><th>规则明确</th><th>重复性高</th><th>耗时多</th><th>错了不致命</th><th>总分</th><th>排名</th></tr></thead><tbody><tr><td><input class="input" data-k="p05_name1" data-label="候选 1 名称" placeholder="候选 1"></td><td><select data-k="p05_c1_r1" data-label="候选 1 判据 1" data-cand="1" data-crit="1"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><select data-k="p05_c1_r2" data-label="候选 1 判据 2" data-cand="1" data-crit="2"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><select data-k="p05_c1_r3" data-label="候选 1 判据 3" data-cand="1" data-crit="3"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><select data-k="p05_c1_r4" data-label="候选 1 判据 4" data-cand="1" data-crit="4"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><span class="score-total" id="total1">0</span> / 20</td><td id="rank1">—</td></tr><tr><td><input class="input" data-k="p05_name2" data-label="候选 2 名称" placeholder="候选 2"></td><td><select data-k="p05_c2_r1" data-label="候选 2 判据 1" data-cand="2" data-crit="1"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><select data-k="p05_c2_r2" data-label="候选 2 判据 2" data-cand="2" data-crit="2"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><select data-k="p05_c2_r3" data-label="候选 2 判据 3" data-cand="2" data-crit="3"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><select data-k="p05_c2_r4" data-label="候选 2 判据 4" data-cand="2" data-crit="4"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><span class="score-total" id="total2">0</span> / 20</td><td id="rank2">—</td></tr><tr><td><input class="input" data-k="p05_name3" data-label="候选 3 名称" placeholder="候选 3"></td><td><select data-k="p05_c3_r1" data-label="候选 3 判据 1" data-cand="3" data-crit="1"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><select data-k="p05_c3_r2" data-label="候选 3 判据 2" data-cand="3" data-crit="2"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><select data-k="p05_c3_r3" data-label="候选 3 判据 3" data-cand="3" data-crit="3"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><select data-k="p05_c3_r4" data-label="候选 3 判据 4" data-cand="3" data-crit="4"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td><td><span class="score-total" id="total3">0</span> / 20</td><td id="rank3">—</td></tr></tbody></table></div><p class="sec-desc" style="margin-top:10px">排名按总分自动计算；同分时按「错了不致命」优先。</p></div>
+</section>
+<section class="card " data-section="一票否决项">
+<div class="card-head"><div class="sec-num">03</div><div><h2>一票否决项</h2><p class="sec-desc">出现任意一条，先换场景。不要用意志力对抗结构性风险。</p></div></div>
+<div class="card-body"><div class="check-grid"><label class="check"><input type="checkbox" data-k="p05_veto_life" data-label="错了会出人命或造成不可逆损失"><span>错了会出人命或造成不可逆损失</span></label><label class="check"><input type="checkbox" data-k="p05_veto_law" data-label="触碰合规 / 隐私 / 资质红线"><span>触碰合规 / 隐私 / 资质红线</span></label><label class="check"><input type="checkbox" data-k="p05_veto_data" data-label="真实数据拿不到，或不能给 AI 看"><span>真实数据拿不到，或不能给 AI 看</span></label><label class="check"><input type="checkbox" data-k="p05_veto_user" data-label="没有人愿意用，只是我觉得该做"><span>没有人愿意用，只是我觉得该做</span></label><label class="check"><input type="checkbox" data-k="p05_veto_week" data-label="一周内无法验证，反馈周期太长"><span>一周内无法验证，反馈周期太长</span></label></div></div>
+</section>
+<section class="card " data-section="决策">
+<div class="card-head"><div class="sec-num">04</div><div><h2>决策</h2><p class="sec-desc">分数最高不一定最该做。把「为什么」写下来，防止明天反悔。</p></div></div>
+<div class="card-body"><div class="grid2"><div class="field"><div class="label"><span>最终入选场景</span></div><input class="input" type="text" data-k="p05_pick" data-label="最终入选场景" placeholder="一句话，带用户和触发。"></div><div class="field"><div class="label"><span>备选场景</span></div><input class="input" type="text" data-k="p05_backup" data-label="备选场景" placeholder="这次不做，但值得留档。"></div><div class="field"><div class="label"><span>入选理由（对应哪条判据）</span></div><textarea class="tall" data-k="p05_reason" data-label="入选理由（对应哪条判据）" placeholder="例如：每周 40 次、每次 25 分钟、错了可人工回滚。"></textarea></div><div class="field"><div class="label"><span>最大风险与兜底</span></div><textarea class="tall" data-k="p05_risk" data-label="最大风险与兜底" placeholder="最可能在哪翻车？谁来做最后一道人工检查？"></textarea></div></div></div>
+</section>
+<section class="card " data-section="反直觉提醒">
+<div class="card-head"><div class="sec-num">05</div><div><h2>反直觉提醒</h2><p class="sec-desc">大场景听起来更有价值，但小场景才能给你第一次真实反馈。</p></div></div>
+<div class="card-body"><div class="callout purple"><strong>蒋之之 · 取消订单：</strong>「全业务 AI 化」太大，第一步缩到一个场景 × 一个 Feature，再用 5000 字提示词把老员工的隐性知识挖出来。小，才跑得动。</div><div class="field"><div class="label"><span>分数最高不一定最该做，因为……</span></div><textarea class="tall" data-k="p05_counter" data-label="分数最高不一定最该做，因为……" placeholder="写你自己的判断，不写标准答案。"></textarea></div></div>
+</section>
+</main>
+<footer class="footer">
+  <span>一堂 AI FDE 工作坊 · 节点 kma · 3 小时填写手册</span>
+  <span><a href="index.html">返回目录</a> · 内容自动保存在本机浏览器</span>
+</footer>
+<script>
+(function(){
+  const page = document.body.dataset.page;
+  const key = 'ytfde-' + page;
+  const stateEl = document.getElementById('saveState');
+  let timer;
+  function collect(){
+    const data = {};
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      if(el.type === 'checkbox'){
+        data[el.dataset.k] = el.checked;
+      } else if(el.type === 'radio'){
+        if(el.checked) data[el.dataset.k] = el.value;
+      } else {
+        data[el.dataset.k] = el.value;
+      }
+    });
+    return data;
+  }
+  function save(quiet){
+    try{
+      localStorage.setItem(key, JSON.stringify(collect()));
+      if(!quiet && stateEl){
+        stateEl.textContent = '已保存 ' + new Date().toLocaleTimeString('zh-CN',{hour12:false});
+        stateEl.classList.add('ok');
+      }
+    }catch(e){
+      if(stateEl) stateEl.textContent = '保存失败';
+    }
+  }
+  function restore(){
+    let data = {};
+    try{ data = JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ data = {}; }
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const v = data[el.dataset.k];
+      if(v === undefined) return;
+      if(el.type === 'checkbox') el.checked = !!v;
+      else if(el.type === 'radio') el.checked = (el.value === v);
+      else el.value = v;
+    });
+    if(stateEl && Object.keys(data).length) stateEl.textContent = '已恢复上次填写';
+    document.dispatchEvent(new CustomEvent('handout:restore'));
+  }
+  function md(){
+    const title = document.title.split('|')[0].trim();
+    const lines = ['# ' + title, '', '> 一堂 AI FDE 工作坊 · 节点 kma', '', '导出时间：' + new Date().toLocaleString('zh-CN'), ''];
+    let current = '';
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const sec = el.closest('[data-section]');
+      const secName = sec ? sec.dataset.section : '其他';
+      if(secName !== current){ current = secName; lines.push('', '## ' + secName); }
+      let val;
+      if(el.type === 'checkbox') val = el.checked ? '☑' : '☐';
+      else if(el.type === 'radio'){ if(!el.checked) return; val = el.value; }
+      else val = el.value || '';
+      if(el.type !== 'checkbox' && String(val).trim() === '') return;
+      const label = el.dataset.label || el.name || el.dataset.k;
+      lines.push('- **' + label + '**：' + String(val).replace(/\n/g, '\n  '));
+    });
+    return lines.join('\n');
+  }
+  function download(){
+    save(true);
+    const title = document.title.split('|')[0].trim().replace(/[\\/:*?"<>|]/g, '-').replace(/\s+/g, '-');
+    const blob = new Blob([md()], {type:'text/markdown;charset=utf-8'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = page + '-' + title + '.md';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 600);
+  }
+  document.addEventListener('input', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 500);
+  });
+  document.addEventListener('change', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 300);
+    if(window.handoutUpdate) window.handoutUpdate();
+  });
+  document.addEventListener('click', function(e){
+    const b = e.target.closest('[data-act]');
+    if(!b) return;
+    const act = b.dataset.act;
+    if(act === 'export') download();
+    if(act === 'print') window.print();
+    if(act === 'clear'){
+      if(confirm('确定清空本页所有填写内容？此操作不可撤销。')){
+        localStorage.removeItem(key);
+        location.reload();
+      }
+    }
+  });
+  restore();
+})();
+</script>
+<script>
+function update05(){
+  const totals = [];
+  for(let i = 1; i <= 3; i++){
+    let sum = 0;
+    for(let j = 1; j <= 4; j++){
+      const el = document.querySelector('select[data-cand="' + i + '"][data-crit="' + j + '"]');
+      sum += el && el.value ? Number(el.value) : 0;
+    }
+    const t = document.getElementById('total' + i);
+    if(t) t.textContent = sum;
+    totals.push(sum);
+  }
+  const sorted = totals.slice().sort(function(a,b){ return b - a; });
+  for(let i = 0; i < 3; i++){
+    const r = document.getElementById('rank' + (i + 1));
+    if(r) r.textContent = sorted.indexOf(totals[i]) + 1;
+  }
+}
+window.handoutUpdate = update05;
+document.addEventListener('input', update05);
+update05();
+</script>
+</body>
+</html>

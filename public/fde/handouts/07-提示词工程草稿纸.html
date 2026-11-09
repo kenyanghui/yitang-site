@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>07 · 提示词工程草稿纸 | 一堂 AI FDE 工作坊</title>
+<link rel="stylesheet" href="handout.css">
+</head>
+<body data-page="b3-07">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">一</span><span>一堂 · AI FDE 工作坊</span><span class="brand-sub">NODE KMA</span></a>
+  <div class="top-actions">
+    <span class="save-state" id="saveState">已就绪</span>
+    <button class="btn ghost" data-act="print">打印</button>
+    <button class="btn ghost" data-act="clear">清空</button>
+    <button class="btn gold" data-act="export">导出 Markdown</button>
+  </div>
+</header>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">HANDOUT 07 / 12 · NODE KMA</div>
+<h1>提示词工程草稿纸</h1>
+<p class="lead">提示词不是作文，是工作说明书。五段骨架，缺一段就会在真实场景里翻车。每一段都写可执行的话。</p>
+<div class="meta"><span>5 段骨架</span><span>可拼装</span><span>50 分钟</span></div>
+</section>
+<section class="card " data-section="五段骨架">
+<div class="card-head"><div class="sec-num">01</div><div><h2>五段骨架</h2><p class="sec-desc">先写满，再删。宁可具体到啰嗦，也不要正确到没用。</p></div></div>
+<div class="card-body"><div class="week-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><h3>01 · 角色</h3><span class="tag gold">角色</span></div><p class="week-sub">你是谁、服务谁、专业标准是什么。</p><textarea class="tall" data-k="p07_role" data-label="角色" placeholder="你是一名有 10 年经验的客服主管，服务一线客服，判断标准是事实准确、语气不激化。"></textarea><label class="check" style="margin-top:9px"><input type="checkbox" data-k="p07_chk_role" data-label="这一段我能被同事复现"><span>这一段我能被同事复现</span></label></div><div class="week-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><h3>02 · 场景知识</h3><span class="tag gold">场景知识</span></div><p class="week-sub">背景、术语、隐性规则、常见例外。</p><textarea class="tall" data-k="p07_know" data-label="场景知识" placeholder="把老员工「一眼就知道」的东西写出来：哪些话不能说、哪些客户要升级、哪些承诺不能给。"></textarea><label class="check" style="margin-top:9px"><input type="checkbox" data-k="p07_chk_know" data-label="知识来自真实案例，不是想象"><span>知识来自真实案例，不是想象</span></label></div><div class="week-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><h3>03 · 流程拆解</h3><span class="tag gold">流程拆解</span></div><p class="week-sub">第一步、第二步、判断点、输出格式。</p><textarea class="tall" data-k="p07_flow" data-label="流程拆解" placeholder="先读订单，再判断情绪，再给三种回复：安抚版、解决版、升级版。每版不超过 120 字。"></textarea><label class="check" style="margin-top:9px"><input type="checkbox" data-k="p07_chk_flow" data-label="步骤能照着做，不需要猜"><span>步骤能照着做，不需要猜</span></label></div><div class="week-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><h3>04 · 数据样例</h3><span class="tag gold">数据样例</span></div><p class="week-sub">一个真实输入、期望输出、一个反例。</p><textarea class="tall" data-k="p07_sample" data-label="数据样例" placeholder="输入：客户说「你们又延迟了」。期望：先道歉、再给时间、再给补偿边界。反例：直接说「这是物流的问题」。"></textarea><label class="check" style="margin-top:9px"><input type="checkbox" data-k="p07_chk_sample" data-label="样例来自真实业务"><span>样例来自真实业务</span></label></div><div class="week-card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><h3>05 · 边界</h3><span class="tag gold">边界</span></div><p class="week-sub">不能做什么、不确定时怎么问、何时转人工。</p><textarea class="tall" data-k="p07_bound" data-label="边界" placeholder="不承诺赔偿、不编造物流信息、不评价客户。不确定时先问「订单号是多少」。涉及退款转人工。"></textarea><label class="check" style="margin-top:9px"><input type="checkbox" data-k="p07_chk_bound" data-label="边界和兜底都写清了"><span>边界和兜底都写清了</span></label></div></div>
+</section>
+<section class="card " data-section="拼装与版本">
+<div class="card-head"><div class="sec-num">02</div><div><h2>拼装与版本</h2><p class="sec-desc">点按钮生成骨架，再手动改。右侧草稿会自动保存。</p></div></div>
+<div class="card-body"><div class="grid3"><div class="field"><div class="label"><span>版本号</span></div><input class="input" type="text" data-k="p07_ver" data-label="版本号" placeholder="例如：v0.3"></div><div class="field"><div class="label"><span>日期</span></div><input class="input" type="text" data-k="p07_date" data-label="日期" placeholder="2026-__-__"></div><div class="field"><div class="label"><span>模型 / 工具</span></div><input class="input" type="text" data-k="p07_model" data-label="模型 / 工具" placeholder="例如：通用对话模型 + 知识库"></div></div><div style="display:flex;align-items:center;gap:12px;margin:14px 0;flex-wrap:wrap"><button class="btn gold" id="build07" type="button">生成 / 刷新提示词骨架</button><span class="save-state" id="wc07" style="text-align:left">0 字</span></div><textarea class="tall" id="promptOut" data-k="p07_final" data-label="提示词最终稿" placeholder="点击上方按钮生成，或直接在这里写最终稿。"></textarea></div>
+</section>
+<section class="card " data-section="隐性知识三问">
+<div class="card-head"><div class="sec-num">03</div><div><h2>隐性知识三问</h2><p class="sec-desc">蒋之之写 5000 字提示词，不是为了长，是为了把老员工的隐性知识挖出来。</p></div></div>
+<div class="card-body"><div class="grid3"><div class="field"><div class="label"><span>老手一眼看出的东西</span></div><textarea class="tall" data-k="p07_q1" data-label="老手一眼看出的东西" placeholder="例如：客户说「随便」时，其实是在等一个更具体的方案。"></textarea></div><div class="field"><div class="label"><span>新人最常犯的错</span></div><textarea class="tall" data-k="p07_q2" data-label="新人最常犯的错" placeholder="例如：先解释流程，再道歉；客户只觉得你在推责。"></textarea></div><div class="field"><div class="label"><span>客户没说出口的要求</span></div><textarea class="tall" data-k="p07_q3" data-label="客户没说出口的要求" placeholder="例如：要一个能转发给领导的说法。"></textarea></div></div></div>
+</section>
+<section class="card " data-section="交付前自检">
+<div class="card-head"><div class="sec-num">04</div><div><h2>交付前自检</h2><p class="sec-desc">五段都过一遍，再拿去跑。</p></div></div>
+<div class="card-body"><div class="check-grid"><label class="check"><input type="checkbox" data-k="p07_self_role" data-label="角色具体，不是「资深专家」四个字"><span>角色具体，不是「资深专家」四个字</span></label><label class="check"><input type="checkbox" data-k="p07_self_know" data-label="场景知识可验证，有真实术语"><span>场景知识可验证，有真实术语</span></label><label class="check"><input type="checkbox" data-k="p07_self_flow" data-label="流程步骤可执行，有判断点"><span>流程步骤可执行，有判断点</span></label><label class="check"><input type="checkbox" data-k="p07_self_sample" data-label="数据样例真实，包含一个反例"><span>数据样例真实，包含一个反例</span></label><label class="check"><input type="checkbox" data-k="p07_self_bound" data-label="边界明确，不确定时知道怎么办"><span>边界明确，不确定时知道怎么办</span></label><label class="check"><input type="checkbox" data-k="p07_self_format" data-label="输出格式固定，方便验收"><span>输出格式固定，方便验收</span></label></div><div class="callout"><strong>提示：</strong>提示词不是一次写完的。第一版只求能跑，第二轮再补审美和边界。</div></div>
+</section>
+</main>
+<footer class="footer">
+  <span>一堂 AI FDE 工作坊 · 节点 kma · 3 小时填写手册</span>
+  <span><a href="index.html">返回目录</a> · 内容自动保存在本机浏览器</span>
+</footer>
+<script>
+(function(){
+  const page = document.body.dataset.page;
+  const key = 'ytfde-' + page;
+  const stateEl = document.getElementById('saveState');
+  let timer;
+  function collect(){
+    const data = {};
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      if(el.type === 'checkbox'){
+        data[el.dataset.k] = el.checked;
+      } else if(el.type === 'radio'){
+        if(el.checked) data[el.dataset.k] = el.value;
+      } else {
+        data[el.dataset.k] = el.value;
+      }
+    });
+    return data;
+  }
+  function save(quiet){
+    try{
+      localStorage.setItem(key, JSON.stringify(collect()));
+      if(!quiet && stateEl){
+        stateEl.textContent = '已保存 ' + new Date().toLocaleTimeString('zh-CN',{hour12:false});
+        stateEl.classList.add('ok');
+      }
+    }catch(e){
+      if(stateEl) stateEl.textContent = '保存失败';
+    }
+  }
+  function restore(){
+    let data = {};
+    try{ data = JSON.parse(localStorage.getItem(key) || '{}'); }catch(e){ data = {}; }
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const v = data[el.dataset.k];
+      if(v === undefined) return;
+      if(el.type === 'checkbox') el.checked = !!v;
+      else if(el.type === 'radio') el.checked = (el.value === v);
+      else el.value = v;
+    });
+    if(stateEl && Object.keys(data).length) stateEl.textContent = '已恢复上次填写';
+    document.dispatchEvent(new CustomEvent('handout:restore'));
+  }
+  function md(){
+    const title = document.title.split('|')[0].trim();
+    const lines = ['# ' + title, '', '> 一堂 AI FDE 工作坊 · 节点 kma', '', '导出时间：' + new Date().toLocaleString('zh-CN'), ''];
+    let current = '';
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      const sec = el.closest('[data-section]');
+      const secName = sec ? sec.dataset.section : '其他';
+      if(secName !== current){ current = secName; lines.push('', '## ' + secName); }
+      let val;
+      if(el.type === 'checkbox') val = el.checked ? '☑' : '☐';
+      else if(el.type === 'radio'){ if(!el.checked) return; val = el.value; }
+      else val = el.value || '';
+      if(el.type !== 'checkbox' && String(val).trim() === '') return;
+      const label = el.dataset.label || el.name || el.dataset.k;
+      lines.push('- **' + label + '**：' + String(val).replace(/\n/g, '\n  '));
+    });
+    return lines.join('\n');
+  }
+  function download(){
+    save(true);
+    const title = document.title.split('|')[0].trim().replace(/[\\/:*?"<>|]/g, '-').replace(/\s+/g, '-');
+    const blob = new Blob([md()], {type:'text/markdown;charset=utf-8'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = page + '-' + title + '.md';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 600);
+  }
+  document.addEventListener('input', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 500);
+  });
+  document.addEventListener('change', function(e){
+    if(!e.target.matches('[data-k]')) return;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ save(false); }, 300);
+    if(window.handoutUpdate) window.handoutUpdate();
+  });
+  document.addEventListener('click', function(e){
+    const b = e.target.closest('[data-act]');
+    if(!b) return;
+    const act = b.dataset.act;
+    if(act === 'export') download();
+    if(act === 'print') window.print();
+    if(act === 'clear'){
+      if(confirm('确定清空本页所有填写内容？此操作不可撤销。')){
+        localStorage.removeItem(key);
+        location.reload();
+      }
+    }
+  });
+  restore();
+})();
+</script>
+<script>
+function count07(){
+  const el = document.getElementById('promptOut');
+  const wc = document.getElementById('wc07');
+  if(el && wc) wc.textContent = el.value.replace(/\s/g, '').length + ' 字';
+}
+window.handoutUpdate = count07;
+document.addEventListener('input', count07);
+document.getElementById('build07')?.addEventListener('click', function(){
+  const get = function(k){
+    const el = document.querySelector('[data-k="' + k + '"]');
+    return (el ? el.value : '').trim() || '（待填写）';
+  };
+  const text = '# 角色\n' + get('p07_role')
+    + '\n\n# 场景知识\n' + get('p07_know')
+    + '\n\n# 流程拆解\n' + get('p07_flow')
+    + '\n\n# 数据样例\n' + get('p07_sample')
+    + '\n\n# 边界\n' + get('p07_bound');
+  const out = document.getElementById('promptOut');
+  if(out){
+    out.value = text;
+    out.dispatchEvent(new Event('input', {bubbles:true}));
+    count07();
+  }
+});
+count07();
+</script>
+</body>
+</html>
